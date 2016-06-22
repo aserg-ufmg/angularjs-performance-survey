@@ -1,2 +1,2 @@
-# peerj-angularjs
-Repository related to paper submitted to PeerJ CS
+# survey-angularjs
+Repository related to paper submitted to JSS
