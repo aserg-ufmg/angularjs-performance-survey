@@ -1,261 +1,168 @@
-# survey-angularjs-performance
+# AngularJS Performance: A Survey Study
+
 Repository related to paper submitted to IEEE Software
 
 #### [DOC1] Developer Guide: Unit Testing
 * Access date: September-2015
 * URL: https://docs.angularjs.org/guide/unit-testing}
 
-#### [DOC2] API Reference: \mcode{\$compile}\\
-* Access date:} September-2015\\
-* URL: https://docs.angularjs.org/api/ng/service/$compile}
-
-\item \
-
-\textbf{Identifier:} BLOG1\\
-\textbf{Title:} Choosing a JavaScript MVC Framework\\
-\textbf{Access date: June-2015} \\
-\textbf{URL:} \url{http://www.funnyant.com/choosing-javascript-mvc-framework/}
-\textbf{Author:} Craig McKeachie\\
-\textbf{Author information:} Microsoft Certified Solutions Developer.
-
-\item \
-
-\textbf{Identifier:} BLOG2\\
-\textbf{Title:} AngularJS vs. Backbone.js vs. Ember.js\\
-\textbf{Access date}: August-2015\\
-\textbf{URL}: \url{https://www.airpair.com/js/javascript-framework-comparison}\\
-\textbf{Author}: Uri Shaked\\
-\textbf{Author information}: The author works for WatchDox, lectures at the Israel Institute of Technology, and organizes the Tel Aviv Google Developers Group.
-
-\item \
-
-\textbf{Identifier:} BLOG3\\
-\textbf{Title:} Unit Testing AngularJS Directives With External Templates\\
-\textbf{Access date: September-2015} \\
-\textbf{URL:} \url{http://www.bluesphereinc.com/blog/unit-testing-angularjs-directives}\\
-\textbf{Author:} Chris Hooker\\
-\textbf{Author information:} The author is a graduate of MIT, and has over 15 years of software development experience.
-
-\item \
-
-\textbf{Identifier:} BLOG4\\
-\textbf{Title:} What's wrong with Angular\\
-\textbf{Access date:} September-2015\\
-\textbf{URL:} \url{http://www.quirksmode.org/blog/archives/2015/01/the_problem_wit.html}\\
-\textbf{Author:} Daniel Steigerwald\\
-\textbf{Author information:} JavaScript Developer and Consultant. Member of the Google Developers Expert Program.
-
-\item \
-
-\textbf{Identifier:} BLOG5\\
-\textbf{Title:} Optimizing AngularJS: 1200ms to 35ms\\
-\textbf{Access date:} August-2015\\
-\textbf{URL:} \url{http://blog.scalyr.com/2013/10/angularjs-1200ms-to-35ms/}\\
-\textbf{Author:} Steven Czerwinksi\\
-\textbf{Author information:} Staff Software Engineer at Scalyr.
-
-\item \
-
-\textbf{Identifier:} BLOG6\\
-\textbf{Title:} Speeding Up AngularJS Apps With Simple Optimizations\\
-\textbf{Access date:} August-2015\\
-\textbf{URL:} \url{http://www.binpress.com/tutorial/speeding-up-angular-js-with-} \url{simple-optimizations/135}\\
-\textbf{Author:} Todd Motto\\
-\textbf{Author information:} Director of Web Development at Mozio. He works with JavaScript and AngularJS.
-
-\item \
-
-\textbf{Identifier:} BLOG7\\
-\textbf{Title:} AngularJS: My Solution to the \mcode{ng-repeat} Performance Problem\\
-\textbf{Access date:} July-2015\\
-\textbf{URL:} \url{http://www.williambrownstreet.net/blog/2013/07/angularjs-my-solution-to-the-ng-repeat-performance-problem/}\\
-\textbf{Author:} Thierry Nicola\\
-\textbf{Author information:} Computer Scientist, working with Grails, AngularJS, BackboneJS, and ChaplinJS.
-
-\item \
-
-\textbf{Identifier:} BLOG8\\
-\textbf{Title:} AngularJS Performance in Large Applications\\
-\textbf{Access date:} August-2015\\
-\textbf{URL:} \url{https://www.airpair.com/angularjs/posts/angularjs-performance-large-applications}\\
-\textbf{Author:} Abraham Polishchuk\\
-\textbf{Author information:} NodeJS/AngularJS engineer at Lanetix.
-
-\item \
-
-\textbf{Identifier:} BLOG9\\
-\textbf{Title:} Why You Should Not Use Angularjs\\
-\textbf{Access date:} June-2015\\
-\textbf{URL:} \url{https://medium.com/@mnemon1ck/why-you-should-not-use-angularjs-} \url{1df5ddf6fc99}\\
-\textbf{Author:} Egor Koshelko\\
-\textbf{Author information:} Fullstack NodeJS Developer.
-
-\item \
-
-\textbf{Identifier:} BLOG10\\
-\textbf{Title:} AngularJS Critique\\
-\textbf{Access date:} October-2015\\
-\textbf{URL:} \url{http://tutorials.jenkov.com/angularjs/critique.html}\\
-\textbf{Author:} Jakob Jenkov\\
-\textbf{Author information:} Founder and CEO at Jenkov Aps.
-
-\item \
-
-\textbf{Identifier:} BLOG11\\
-\textbf{Title:} Debugging AngularJS\\
-\textbf{Access date:} October-2015\\
-\textbf{URL:} \url{https://www.ng-book.com/p/Debugging-AngularJS/}\\
-\textbf{Author:} Ari Lerner\\
-\textbf{Author information:} Developer with more than 20 years of experience, and co-founder of Fullstack.io. The author has been using AngularJS for a long time and is a recognized expert in the field.
-
-\item \
-
-\textbf{Identifier:} BLOG12\\
-\textbf{Title:} A Guide To Transclusion in AngularJS\\
-\textbf{Access date:} October-2015\\
-\textbf{URL:} \url{http://teropa.info/blog/2015/06/09/transclusion.html}\\
-\textbf{Author:} Tero Parviainen
-
-
-\item \
-
-\textbf{Identifier:} BLOG13\\
-\textbf{Title:} An Intervention: Why AngularJS is Worse Than a New ASP.NET WebForms\\
-\textbf{Access date:} October-2015\\
-\textbf{URL:} \url{https://medium.com/@benastontweet/an-intervention-4535d835e836}\\
-\textbf{Author:} Ben Aston\\
-\textbf{Author information:} Consultant developer specializing in web applications.
-
-\item \
-
-\textbf{Identifier:} BLOG14\\
-\textbf{Title:} Scope Creep, a Deep Dive Into Angular's Scope\\
-\textbf{Access date:} October-2015\\
-\textbf{URL:} \url{http://jonathancreamer.com/working-with-all-the-different-kinds-of-scopes-in-angular/}\\
-\textbf{Author:} Jonathan Creamer\\
-\textbf{Author information:} JavaScript, Ruby, C\#, Node, Rails, .NET MVC, MS MVP, Telerik Developer Expert, and IEuserAgent.
-
-\item \
-
-\textbf{Identifier:} BLOG15\\
-\textbf{Title:} Adding Clarity to Scope Inheritance in Angular\\
-\textbf{Access date:} October-2015\\
-\textbf{URL:} \url{http://jonathancreamer.com/adding-clarity-to-scope-inheritance-in-angular/}\\
-\textbf{Author:} Jonathan Creamer\\
-\textbf{Author information:} JavaScript, Ruby, C\#, Node, Rails, .NET MVC. MS MVP, Telerik Developer Expert, and IEuserAgent.
-
-
-\item \
-
-\textbf{Identifier:} BLOG16\\
-\textbf{Title:} Mastering AngularJS directives\\
-\textbf{Access date:} October-2015\\
-\textbf{URL:} \url{http://code.tutsplus.com/tutorials/mastering-angularjs-directives--cms-22511}\\
-\textbf{Author:} Hüseyin Babal\\
-\textbf{Author information:} NodeJS, PHP, Java, Elasticsearch, WordPress Plugin/Widget Development, MySQL, MongoDB, SEO, Agile Software Development, Cloud Integration, SCRUM.CSM.
-
-\item \
-
-\textbf{Identifier:} BLOG17\\
-\textbf{Title:} Creating Custom AngularJS Directives Part I - The Fundamentals\\
-\textbf{Access date:} September-2015\\
-\textbf{URL:} \url{http://weblogs.asp.net/dwahlin/creating-custom-angularjs-directives-part-i-the-fundamentals}\\
-\textbf{Author:} Dan Wahlin\\
-\textbf{Author information:} JavaScript/ES6, Node.js, Angular, HTML5, jQuery, Node.js, ASP.NET MVC, C\#.
-
-\item \
-
-\textbf{Identifier:} BLOG18\\
-\textbf{Title:} Directive Controller And Link Timing In AngularJS\\
-\textbf{Access date:} September-2015\\
-\textbf{URL:} \url{http://www.bennadel.com/blog/2603-directive-controller-and-link-timing-in-angularjs.htm}\\
-\textbf{Author:} Ben Nadel\\
-\textbf{Author information:} Adobe Community Expert as well as an Adobe Certified Professional in Advanced ColdFusion.
-
-\item \
-
-\textbf{Identifier:} Q\&A1\\
-\textbf{Title:} Template Type Conversion Errors are Difficult to Debug\\
-\textbf{Access date:} September-2015\\
-\textbf{URL:} \url{https://github.com/angular/angular.js/issues/1974}
-
-\item \
-
-\textbf{Identifier:} Q\&A2\\
-\textbf{Title:} Why Don't AngularJS Errors in the HTML Show Up in the Console?\\
-\textbf{Access date:} September-2015\\
-\textbf{URL:} \url{http://stackoverflow.com/q/26227596}
-
-
-\item \
-
-\textbf{Identifier:} Q\&A3\\
-\textbf{Title:} Separating JS Logic From Angular Templates\\
-\textbf{Access date:} October-2015\\
-\textbf{URL:} \url{https://groups.google.com/forum/\#!topic/angular/pHSMrphDJhM}
-
-\item \
-
-\textbf{Identifier:} Q\&A4\\
-\textbf{Title:} AngularJS Use of Inline JavaScript in HTML Attributes is not Bad Practice?\\
-\textbf{Access date:} October-2015\\
-\textbf{URL:} \url{http://stackoverflow.com/q/14793692}
-
-\item \
-
-\textbf{Identifier:} Q\&A5\\
-\textbf{Title:} AngularJS: Is \mcode{ngClick} a Good Practice Why is There no \mcode{ng-event} in AngularJS?\\
-\textbf{Access date:} September-2015\\
-\textbf{URL:} \url{http://stackoverflow.com/q/14346073}
-
-\item \
-
-\textbf{Identifier:} Q\&A6\\
-\textbf{Title:} How to not Let Angular Spoil All Your HTML With Logic Code?\\
-\textbf{Access date:} October-2015\\
-\textbf{URL:} \url{http://www.reddit.com/r/angularjs/comments/2b15dv/how_to_not_let_angular_spoil_all_your_html_with/}
-
-\item \
-
-\textbf{Identifier:} Q\&A7\\
-\textbf{Title:} Should AngularJS Logic Be Placed in HTML File?\\
-\textbf{Access date:} September-2015\\
-\textbf{URL:} \url{http://stackoverflow.com/a/24845815}
-
-\item \
-
-\textbf{Identifier:} Q\&A8\\
-\textbf{Title:} Using \mcode{scope.\$watch} and \mcode{scope.\$apply} in AngularJS\\
-\textbf{Access date:} September-2015\\
-\textbf{URL:} \url{http://stackoverflow.com/q/15112584}
-
-\item \
-
-\textbf{Identifier:} Q\&A9\\
-\textbf{Title:} What Does \mcode{\$scope.\$apply()} Do?\\
-\textbf{Access date:} September-2015\\
-\textbf{URL:} \url{http://stackoverflow.com/q/18710478}\\
-\textbf{Author:} Dan Prince
-
-\item \
-
-\textbf{Identifier:} Q\&A10\\
-\textbf{Title:} Correct Way to Integrate jQuery Plugins in AngularJS\\
-\textbf{Access date:} October-2015\\
-\textbf{URL:} \url{http://stackoverflow.com/q/16935095}
-
-\item \
-
-\textbf{Identifier:} Q\&A11\\
-\textbf{Title:} Difference Between the \aspassimples{controller}, \aspassimples{link} and \aspassimples{compile} Functions When Defining a Directive\\
-\textbf{Access date:} October-2015\\
-\textbf{URL:} \url{http://stackoverflow.com/q/12546945}
-
-\end{enumerate}
-
-\subsection{Relevant Quotations}
-
-\begin{itemize}
+#### [DOC2] API Reference: \mcode{\$compile}
+* Access date:} September-2015
+* URL: https://docs.angularjs.org/api/ng/service/$compile
+
+#### [BLOG1] Choosing a JavaScript MVC Framework
+* Access date: June-2015} 
+* URL: http://www.funnyant.com/choosing-javascript-mvc-framework/
+* Author: Craig McKeachie
+* Author information: Microsoft Certified Solutions Developer.
+
+ #### [BLOG2] AngularJS vs. Backbone.js vs. Ember.js
+* Access date: August-2015
+* URL: https://www.airpair.com/js/javascript-framework-comparison
+* Author: Uri Shaked
+* Author information: The author works for WatchDox, lectures at the Israel Institute of Technology, and organizes the Tel Aviv Google Developers Group.
+
+ #### [BLOG3] Unit Testing AngularJS Directives With External Templates
+* Access date: September-2015 
+* URL: http://www.bluesphereinc.com/blog/unit-testing-angularjs-directives
+* Author: Chris Hooker
+* Author information: The author is a graduate of MIT, and has over 15 years of software development experience.
+
+ #### [BLOG4] What's wrong with Angular
+* Access date: September-2015
+* URL: http://www.quirksmode.org/blog/archives/2015/01/the_problem_wit.html
+* Author: Daniel Steigerwald
+* Author information: JavaScript Developer and Consultant. Member of the Google Developers Expert Program.
+
+ #### [BLOG5] Optimizing AngularJS: 1200ms to 35ms
+* Access date: August-2015
+* URL: http://blog.scalyr.com/2013/10/angularjs-1200ms-to-35ms/
+* Author: Steven Czerwinksi
+* Author information: Staff Software Engineer at Scalyr.
+
+ #### [BLOG6] Speeding Up AngularJS Apps With Simple Optimizations
+* Access date: August-2015
+* URL: http://www.binpress.com/tutorial/speeding-up-angular-js-with- simple-optimizations/135
+* Author: Todd Motto
+* Author information: Director of Web Development at Mozio. He works with JavaScript and AngularJS.
+
+ #### [BLOG7] AngularJS: My Solution to the mcodeng-repeat Performance Problem
+* Access date: July-2015
+* URL: http://www.williambrownstreet.net/blog/2013/07/angularjs-my-solution-to-the-ng-repeat-performance-problem/
+* Author: Thierry Nicola
+* Author information: Computer Scientist, working with Grails, AngularJS, BackboneJS, and ChaplinJS.
+
+ #### [BLOG8] AngularJS Performance in Large Applications
+* Access date: August-2015
+* URL: https://www.airpair.com/angularjs/posts/angularjs-performance-large-applications
+* Author: Abraham Polishchuk
+* Author information: NodeJS/AngularJS engineer at Lanetix.
+
+ #### [BLOG9] Why You Should Not Use Angularjs
+* Access date: June-2015
+* URL: https://medium.com/@mnemon1ck/why-you-should-not-use-angularjs- 1df5ddf6fc99
+* Author: Egor Koshelko
+* Author information: Fullstack NodeJS Developer.
+
+ #### [BLOG10] AngularJS Critique
+* Access date: October-2015
+* URL: http://tutorials.jenkov.com/angularjs/critique.html
+* Author: Jakob Jenkov
+* Author information: Founder and CEO at Jenkov Aps.
+
+ #### [BLOG11] Debugging AngularJS
+* Access date: October-2015
+* URL: https://www.ng-book.com/p/Debugging-AngularJS/
+* Author: Ari Lerner
+* Author information: Developer with more than 20 years of experience, and co-founder of Fullstack.io. The author has been using AngularJS for a long time and is a recognized expert in the field.
+
+ #### [BLOG12] A Guide To Transclusion in AngularJS
+* Access date: October-2015
+* URL: http://teropa.info/blog/2015/06/09/transclusion.html
+* Author: Tero Parviainen
+
+ #### [BLOG13] An Intervention: Why AngularJS is Worse Than a New ASP.NET WebForms
+* Access date: October-2015
+* URL: https://medium.com/@benastontweet/an-intervention-4535d835e836
+* Author: Ben Aston
+* Author information: Consultant developer specializing in web applications.
+
+ #### [BLOG14] Scope Creep, a Deep Dive Into Angular's Scope
+* Access date: October-2015
+* URL: http://jonathancreamer.com/working-with-all-the-different-kinds-of-scopes-in-angular/
+* Author: Jonathan Creamer
+* Author information: JavaScript, Ruby, C#, Node, Rails, .NET MVC, MS MVP, Telerik Developer Expert, and IEuserAgent.
+
+ #### [BLOG15] Adding Clarity to Scope Inheritance in Angular
+* Access date: October-2015
+* URL: http://jonathancreamer.com/adding-clarity-to-scope-inheritance-in-angular/
+* Author: Jonathan Creamer
+* Author information: JavaScript, Ruby, C#, Node, Rails, .NET MVC. MS MVP, Telerik Developer Expert, and IEuserAgent.
+
+ #### [BLOG16] Mastering AngularJS directives
+* Access date: October-2015
+* URL: http://code.tutsplus.com/tutorials/mastering-angularjs-directives--cms-22511
+* Author: Hüseyin Babal
+* Author information: NodeJS, PHP, Java, Elasticsearch, WordPress Plugin/Widget Development, MySQL, MongoDB, SEO, Agile Software Development, Cloud Integration, SCRUM.CSM.
+
+ #### [BLOG17] Creating Custom AngularJS Directives Part I - The Fundamentals
+* Access date: September-2015
+* URL: http://weblogs.asp.net/dwahlin/creating-custom-angularjs-directives-part-i-the-fundamentals
+* Author: Dan Wahlin
+* Author information: JavaScript/ES6, Node.js, Angular, HTML5, jQuery, Node.js, ASP.NET MVC, C#.
+
+ #### [BLOG18] Directive Controller And Link Timing In AngularJS
+* Access date: September-2015
+* URL: http://www.bennadel.com/blog/2603-directive-controller-and-link-timing-in-angularjs.htm
+* Author: Ben Nadel
+* Author information: Adobe Community Expert as well as an Adobe Certified Professional in Advanced ColdFusion.
+
+ #### [Q&A1] Template Type Conversion Errors are Difficult to Debug
+* Access date: September-2015
+* URL: https://github.com/angular/angular.js/issues/1974
+
+ #### [Q&A2] Why Don't AngularJS Errors in the HTML Show Up in the Console?
+* Access date: September-2015
+* URL: http://stackoverflow.com/q/26227596
+
+ #### [Q&A3] Separating JS Logic From Angular Templates
+* Access date: October-2015
+* URL: https://groups.google.com/forum/#!topic/angular/pHSMrphDJhM
+
+ #### [Q&A4] AngularJS Use of Inline JavaScript in HTML Attributes is not Bad Practice?
+* Access date: October-2015
+* URL: http://stackoverflow.com/q/14793692
+
+ #### [Q&A5] AngularJS: Is mcode{ngClick a Good Practice Why is There no ng-event in AngularJS?
+* Access date: September-2015
+* URL: http://stackoverflow.com/q/14346073
+
+ #### [Q&A6] How to not Let Angular Spoil All Your HTML With Logic Code?
+* Access date: October-2015
+* URL: http://www.reddit.com/r/angularjs/comments/2b15dv/how_to_not_let_angular_spoil_all_your_html_with/
+
+ #### [Q&A7] Should AngularJS Logic Be Placed in HTML File?
+* Access date: September-2015
+* URL: http://stackoverflow.com/a/24845815
+
+ #### [Q&A8]Using scope.$watch and scope.$apply in AngularJS
+* Access date: September-2015
+* URL: http://stackoverflow.com/q/15112584
+
+ #### [Q&A9] What Does $scope.$apply() Do?
+* Access date: September-2015
+* URL: http://stackoverflow.com/q/18710478
+* Author: Dan Prince
+
+ #### [Q&A10] Correct Way to Integrate jQuery Plugins in AngularJS
+* Access date: October-2015
+* URL: http://stackoverflow.com/q/16935095
+
+ #### [Q&A11:] Difference Between the controller, link and compile Functions When Defining a Directive
+* Access date: October-2015
+* URL: http://stackoverflow.com/q/12546945
+
+# Quotations
 
 \item \emph{DOC1:} One of the most useful parts of \mcode{ngMock} is \mcode{\$httpBackend}, which lets us mock XHR requests in tests, and return sample data instead.
 
