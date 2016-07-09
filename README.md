@@ -171,41 +171,51 @@ Repository related to paper submitted to IEEE Software
 
 > Angular also provides the \mcode{ngMock} module, which provides mocking for your tests. This is used to inject and mock Angular services within unit tests. In addition, it is able to extend other modules so they are synchronous. Having tests synchronous keeps them much cleaner and easier to work with.
 
-\item \emph{DOC2:} There are many different options for a directive.
+#### [DOC2]
 
-\item \emph{DOC2:} The \aspassimples{isolate} scope object hash defines a set of local scope properties derived from attributes on the directive's element. These local properties are useful for aliasing values for templates. The keys in the object hash map to the name of the property on the isolate scope; the values define how the property is bound to the parent scope, via matching attributes on the directive's element
+> There are many different options for a directive.
 
+> The \aspassimples{isolate} scope object hash defines a set of local scope properties derived from attributes on the directive's element. These local properties are useful for aliasing values for templates. The keys in the object hash map to the name of the property on the isolate scope; the values define how the property is bound to the parent scope, via matching attributes on the directive's element
 
+#### [BLOG1]
 
-\item \emph{BLOG1:} With Angular and Ember you usually have to live with the choices made by the authors of the frameworks, which may or may not suit your project needs and personal style.
+> With Angular and Ember you usually have to live with the choices made by the authors of the frameworks, which may or may not suit your project needs and personal style.
 
-\item \emph{BLOG1:} It's important to understand how big a download of each of these frameworks is and what you are getting for that extra weight in your application.
+> It's important to understand how big a download of each of these frameworks is and what you are getting for that extra weight in your application.
 
-\item \emph{BLOG2:} Angular helps you categorize your application building blocks into several types: Controllers, Directives, Factories, Filters, Services and Views (templates).
+#### [BLOG2]
 
-\item \emph{BLOG2:} The Digest Cycle of angular, which takes care of the \aspas{Magical} dirty checking, has the tendency to surprise developers. It is easy to forget to call \mcode{\$digest()} when running in non-Angular context.
+> Angular helps you categorize your application building blocks into several types: Controllers, Directives, Factories, Filters, Services and Views (templates).
 
-\item \emph{BLOG2:} Putting logic inside the templates makes it harder to test, as it becomes impossible to test it in isolation.
+> The Digest Cycle of angular, which takes care of the \aspas{Magical} dirty checking, has the tendency to surprise developers. It is easy to forget to call \mcode{\$digest()} when running in non-Angular context.
 
-\item \emph{BLOG2:} Mistakes such as misspelling a directive name or calling an undefined scope function are silently ignored and can be challenging to find.
+> Putting logic inside the templates makes it harder to test, as it becomes impossible to test it in isolation.
 
-\item \emph{BLOG2:} Failing to understand scope inheritance causes many cases of frustrated developers.
+> Mistakes such as misspelling a directive name or calling an undefined scope function are silently ignored and can be challenging to find.
 
-\item \emph{BLOG2:} Wrapping your head around all the concepts such as compiling function, pre/post linking functions, the different scope kinds (transclusion / isolate / child scope) and all the other configuration settings for directives takes some time to master.
+> Failing to understand scope inheritance causes many cases of frustrated developers.
 
-\item \emph{BLOG2:} Promises play a main role in the Angular cast.
+> Wrapping your head around all the concepts such as compiling function, pre/post linking functions, the different scope kinds (transclusion / isolate / child scope) and all the other configuration settings for directives takes some time to master.
 
-\item \emph{BLOG3:} I hate including HTML inline as a string in Javascript, so I definitely wanted to use \mcode{templateUrl}. This was all fine and good, and I got my directive up and running. Then I decided it was time to unit test it. That's where the real fun began.
+> Promises play a main role in the Angular cast.
 
-\item \emph{BLOG3:} I discovered that while getting some simple unit tests running wasn't too hard using just Jasmine, unit testing my \mcode{templateUrl} directive was no simple matter.
+#### [BLOG3]
 
-\item \emph{BLOG3:} The problem with using \mcode{templateUrl} is that Angular uses an HTTP request to go get the file. However, in a unit-testing environment, you don't have the full web server environment and can't actually make the HTTP request. So, you'll get an error when you try to test the directive.
+> I hate including HTML inline as a string in Javascript, so I definitely wanted to use \mcode{templateUrl}. This was all fine and good, and I got my directive up and running. Then I decided it was time to unit test it. That's where the real fun began.
 
-\item \emph{BLOG3:} You want to pre-process your HTML template and convert in into Javascript, which can be testing without any need for HTTP requests.
+> I discovered that while getting some simple unit tests running wasn't too hard using just Jasmine, unit testing my \mcode{templateUrl} directive was no simple matter.
 
-\item \emph{BLOG4:} Dirty checking, accessors (Ember and Backbone), \mcode{Object.observe} and all that stuff. Wrong! It's slow and brittle and it will consume mobile battery like hungry dog, for no reason.
+> The problem with using \mcode{templateUrl} is that Angular uses an HTTP request to go get the file. However, in a unit-testing environment, you don't have the full web server environment and can't actually make the HTTP request. So, you'll get an error when you try to test the directive.
 
-\item \emph{BLOG4:} Angular is HTML parser. I really don't want to debug any string based parser instead of my code.
+> You want to pre-process your HTML template and convert in into Javascript, which can be testing without any need for HTTP requests.
+
+#### [BLOG4]
+
+> Dirty checking, accessors (Ember and Backbone), \mcode{Object.observe} and all that stuff. Wrong! It's slow and brittle and it will consume mobile battery like hungry dog, for no reason.
+
+> Angular is HTML parser. I really don't want to debug any string based parser instead of my code.
+
+#### [BLOG5]
 
 \item \emph{BLOG5:} This shows the power of AngularJS for encapsulation and separation of concerns.
 
