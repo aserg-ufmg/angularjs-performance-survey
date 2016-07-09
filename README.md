@@ -6,11 +6,11 @@ Repository related to paper submitted to IEEE Software
 * Access date: September-2015
 * URL: https://docs.angularjs.org/guide/unit-testing}
 
-> One of the most useful parts of \mcode{ngMock} is \mcode{\$httpBackend}, which lets us mock XHR requests in tests, and return sample data instead.
+> One of the most useful parts of ngMock is \$httpBackend, which lets us mock XHR requests in tests, and return sample data instead.
 
 > Angular is written with testability in mind, but it still requires that you do the right thing. We tried to make the right thing easy, but if you ignore these guidelines you may end up with an untestable application.
 
-> Angular also provides the \mcode{ngMock} module, which provides mocking for your tests. This is used to inject and mock Angular services within unit tests. In addition, it is able to extend other modules so they are synchronous. Having tests synchronous keeps them much cleaner and easier to work with.
+> Angular also provides the ngMock module, which provides mocking for your tests. This is used to inject and mock Angular services within unit tests. In addition, it is able to extend other modules so they are synchronous. Having tests synchronous keeps them much cleaner and easier to work with.
 
 #### [DOC2] API Reference: \mcode{\$compile}
 * Access date:} September-2015
@@ -18,7 +18,7 @@ Repository related to paper submitted to IEEE Software
 
 > There are many different options for a directive.
 
-> The \aspassimples{isolate} scope object hash defines a set of local scope properties derived from attributes on the directive's element. These local properties are useful for aliasing values for templates. The keys in the object hash map to the name of the property on the isolate scope; the values define how the property is bound to the parent scope, via matching attributes on the directive's element
+> The isolate scope object hash defines a set of local scope properties derived from attributes on the directive's element. These local properties are useful for aliasing values for templates. The keys in the object hash map to the name of the property on the isolate scope; the values define how the property is bound to the parent scope, via matching attributes on the directive's element
 
 #### [BLOG1] Choosing a JavaScript MVC Framework
 * Access date: June-2015} 
@@ -26,11 +26,29 @@ Repository related to paper submitted to IEEE Software
 * Author: Craig McKeachie
 * Author information: Microsoft Certified Solutions Developer.
 
+> With Angular and Ember you usually have to live with the choices made by the authors of the frameworks, which may or may not suit your project needs and personal style.
+
+> It's important to understand how big a download of each of these frameworks is and what you are getting for that extra weight in your application.
+
 #### [BLOG2] AngularJS vs. Backbone.js vs. Ember.js
 * Access date: August-2015
 * URL: https://www.airpair.com/js/javascript-framework-comparison
 * Author: Uri Shaked
 * Author information: The author works for WatchDox, lectures at the Israel Institute of Technology, and organizes the Tel Aviv Google Developers Group.
+
+> Angular helps you categorize your application building blocks into several types: Controllers, Directives, Factories, Filters, Services and Views (templates).
+
+> The Digest Cycle of angular, which takes care of the \aspas{Magical} dirty checking, has the tendency to surprise developers. It is easy to forget to call \mcode{\$digest()} when running in non-Angular context.
+
+> Putting logic inside the templates makes it harder to test, as it becomes impossible to test it in isolation.
+
+> Mistakes such as misspelling a directive name or calling an undefined scope function are silently ignored and can be challenging to find.
+
+> Failing to understand scope inheritance causes many cases of frustrated developers.
+
+> Wrapping your head around all the concepts such as compiling function, pre/post linking functions, the different scope kinds (transclusion / isolate / child scope) and all the other configuration settings for directives takes some time to master.
+
+> Promises play a main role in the Angular cast.
 
 #### [BLOG3] Unit Testing AngularJS Directives With External Templates
 * Access date: September-2015 
@@ -38,11 +56,23 @@ Repository related to paper submitted to IEEE Software
 * Author: Chris Hooker
 * Author information: The author is a graduate of MIT, and has over 15 years of software development experience.
 
+> I hate including HTML inline as a string in Javascript, so I definitely wanted to use \mcode{templateUrl}. This was all fine and good, and I got my directive up and running. Then I decided it was time to unit test it. That's where the real fun began.
+
+> I discovered that while getting some simple unit tests running wasn't too hard using just Jasmine, unit testing my \mcode{templateUrl} directive was no simple matter.
+
+> The problem with using \mcode{templateUrl} is that Angular uses an HTTP request to go get the file. However, in a unit-testing environment, you don't have the full web server environment and can't actually make the HTTP request. So, you'll get an error when you try to test the directive.
+
+> You want to pre-process your HTML template and convert in into Javascript, which can be testing without any need for HTTP requests.
+
 #### [BLOG4] What's wrong with Angular
 * Access date: September-2015
 * URL: http://www.quirksmode.org/blog/archives/2015/01/the_problem_wit.html
 * Author: Daniel Steigerwald
 * Author information: JavaScript Developer and Consultant. Member of the Google Developers Expert Program.
+
+> Dirty checking, accessors (Ember and Backbone), \mcode{Object.observe} and all that stuff. Wrong! It's slow and brittle and it will consume mobile battery like hungry dog, for no reason.
+
+> Angular is HTML parser. I really don't want to debug any string based parser instead of my code.
 
 #### [BLOG5] Optimizing AngularJS: 1200ms to 35ms
 * Access date: August-2015
@@ -50,11 +80,15 @@ Repository related to paper submitted to IEEE Software
 * Author: Steven Czerwinksi
 * Author information: Staff Software Engineer at Scalyr.
 
+\item \emph{BLOG5:} This shows the power of AngularJS for encapsulation and separation of concerns.
+
 #### [BLOG6] Speeding Up AngularJS Apps With Simple Optimizations
 * Access date: August-2015
 * URL: http://www.binpress.com/tutorial/speeding-up-angular-js-with- simple-optimizations/135
 * Author: Todd Motto
 * Author information: Director of Web Development at Mozio. He works with JavaScript and AngularJS.
+
+> You'll get an error thrown from Angular if you're calling \mcode{\$scope.\$apply} in the \aspas{wrong} place, usually too high up the call stack.
 
 #### [BLOG7] AngularJS: My Solution to the mcodeng-repeat Performance Problem
 * Access date: July-2015
@@ -62,11 +96,17 @@ Repository related to paper submitted to IEEE Software
 * Author: Thierry Nicola
 * Author information: Computer Scientist, working with Grails, AngularJS, BackboneJS, and ChaplinJS.
 
+> I started with BackboneJS as frontend MVC, but soon switch to AngularJS because of the concept AngularJS adds to HTML.
+
+> AngularJS offers just the right structure for code organization. After some effort to learn to use directives and services, AngularJS forces me to get my code clean.
+
 #### [BLOG8] AngularJS Performance in Large Applications
 * Access date: August-2015
 * URL: https://www.airpair.com/angularjs/posts/angularjs-performance-large-applications
 * Author: Abraham Polishchuk
 * Author information: NodeJS/AngularJS engineer at Lanetix.
+
+> Isolate Scope and Transclusion are some of the most exciting things about Angular. They allow the building of reusable, encapsulated components, they are syntactically and conceptually elegant and a core part of what makes Angular Angular.
 
 #### [BLOG9] Why You Should Not Use Angularjs
 * Access date: June-2015
@@ -74,17 +114,48 @@ Repository related to paper submitted to IEEE Software
 * Author: Egor Koshelko
 * Author information: Fullstack NodeJS Developer.
 
+> Errors in bindings don't fire at all.
+
+> You can't put a breakpoint inside \{\{ this expression \}\}.
+
+> When you write in AngularJS you put your logic into your HTML (\mcode{ng-repeat}, \mcode{ng-show}, \mcode{ng-class}, \mcode{ng-model}, \mcode{ng-init}, \mcode{ng-click}, \mcode{ng-switch}, \mcode{ng-if}). Existence of such logic is not as bad as the fact that it is impossible to test this logic with unit tests, this logic can't be debugged and errors don't fire from markup (but this code contains very important logic).
+
+> Errors that occurred in JavaScript are caught by the internal angular interceptor, and interpreted by browser as caught errors (everything that happens in AngularJS, stays in AngularJS).
+
+>  (comment) The null reference exceptions (in templates (HTML)) are swallowed in order to not break the first renders working properly.
+
+> It's unclear why it was necessary to introduce several ways to do the same thing.
+
+> It is without a doubt the most common error that absolutely every AngularJS developer faces (Scope inheritance).
+
+> There is no logical reason to separate logic for 3 methods (\mcode{compile}, \mcode{link}, \mcode{controller}), all this can be easily implemented in a single method.
+
+> Even in order to integrate some code in the angular world, for example some jQuery plugin, you need to wrap it in a directive.
+
+> Since server side rendering adds logic into your HTML and AngularJS writes logic in HTML, there is no clear separation of concerns and as a result you get spaghetti code.
+
+> The only good thing that AngularJS has is that it forces developers to break their logic into modules, and code becomes more granulated.
+
+
 #### [BLOG10] AngularJS Critique
 * Access date: October-2015
 * URL: http://tutorials.jenkov.com/angularjs/critique.html
 * Author: Jakob Jenkov
 * Author information: Founder and CEO at Jenkov Aps.
 
+> Before AngularJS it was \aspas{best practice} to keep function calls out of the HTML. For instance, you should not use the \mcode{onclick} event attributes on HTML elements, but rather attach event listeners via JavaScript. Somehow that was forgotten with AngularJS, and now we are back to embedding JavaScript function calls in the HTML.
+
+> In order to \aspas{teach HTML new tricks} you end up with HTML full of non-HTML elements and attributes.
+
+> We are back to embedding JavaScript function calls in the HTML.
+
 #### [BLOG11] Debugging AngularJS
 * Access date: October-2015
 * URL: https://www.ng-book.com/p/Debugging-AngularJS/
 * Author: Ari Lerner
 * Author information: Developer with more than 20 years of experience, and co-founder of Fullstack.io. The author has been using AngularJS for a long time and is a recognized expert in the field.
+
+> Angular Batarang is a Chrome extension developed by the Angular team at Google that integrates very nicely as a debugging tool for Angular apps.
 
 #### [BLOG12] A Guide To Transclusion in AngularJS
 * Access date: October-2015
@@ -172,100 +243,12 @@ Repository related to paper submitted to IEEE Software
 * Access date: October-2015
 * URL: http://stackoverflow.com/q/12546945
 
-# Quotations
 
-#### [DOC1]:
-> One of the most useful parts of \mcode{ngMock} is \mcode{\$httpBackend}, which lets us mock XHR requests in tests, and return sample data instead.
 
-> Angular is written with testability in mind, but it still requires that you do the right thing. We tried to make the right thing easy, but if you ignore these guidelines you may end up with an untestable application.
-
-> Angular also provides the \mcode{ngMock} module, which provides mocking for your tests. This is used to inject and mock Angular services within unit tests. In addition, it is able to extend other modules so they are synchronous. Having tests synchronous keeps them much cleaner and easier to work with.
-
-#### [DOC2]
-
-> There are many different options for a directive.
-
-> The \aspassimples{isolate} scope object hash defines a set of local scope properties derived from attributes on the directive's element. These local properties are useful for aliasing values for templates. The keys in the object hash map to the name of the property on the isolate scope; the values define how the property is bound to the parent scope, via matching attributes on the directive's element
-
-#### [BLOG1]
-
-> With Angular and Ember you usually have to live with the choices made by the authors of the frameworks, which may or may not suit your project needs and personal style.
-
-> It's important to understand how big a download of each of these frameworks is and what you are getting for that extra weight in your application.
-
-#### [BLOG2]
-
-> Angular helps you categorize your application building blocks into several types: Controllers, Directives, Factories, Filters, Services and Views (templates).
-
-> The Digest Cycle of angular, which takes care of the \aspas{Magical} dirty checking, has the tendency to surprise developers. It is easy to forget to call \mcode{\$digest()} when running in non-Angular context.
-
-> Putting logic inside the templates makes it harder to test, as it becomes impossible to test it in isolation.
-
-> Mistakes such as misspelling a directive name or calling an undefined scope function are silently ignored and can be challenging to find.
-
-> Failing to understand scope inheritance causes many cases of frustrated developers.
-
-> Wrapping your head around all the concepts such as compiling function, pre/post linking functions, the different scope kinds (transclusion / isolate / child scope) and all the other configuration settings for directives takes some time to master.
-
-> Promises play a main role in the Angular cast.
-
-#### [BLOG3]
-
-> I hate including HTML inline as a string in Javascript, so I definitely wanted to use \mcode{templateUrl}. This was all fine and good, and I got my directive up and running. Then I decided it was time to unit test it. That's where the real fun began.
-
-> I discovered that while getting some simple unit tests running wasn't too hard using just Jasmine, unit testing my \mcode{templateUrl} directive was no simple matter.
-
-> The problem with using \mcode{templateUrl} is that Angular uses an HTTP request to go get the file. However, in a unit-testing environment, you don't have the full web server environment and can't actually make the HTTP request. So, you'll get an error when you try to test the directive.
-
-> You want to pre-process your HTML template and convert in into Javascript, which can be testing without any need for HTTP requests.
-
-#### [BLOG4]
-
-> Dirty checking, accessors (Ember and Backbone), \mcode{Object.observe} and all that stuff. Wrong! It's slow and brittle and it will consume mobile battery like hungry dog, for no reason.
-
-> Angular is HTML parser. I really don't want to debug any string based parser instead of my code.
 
 #### [BLOG5]
 
-\item \emph{BLOG5:} This shows the power of AngularJS for encapsulation and separation of concerns.
 
-\item \emph{BLOG6:} You'll get an error thrown from Angular if you're calling \mcode{\$scope.\$apply} in the \aspas{wrong} place, usually too high up the call stack.
-
-\item \emph{BLOG7:} I started with BackboneJS as frontend MVC, but soon switch to AngularJS because of the concept AngularJS adds to HTML.
-
-\item \emph{BLOG7:} AngularJS offers just the right structure for code organization. After some effort to learn to use directives and services, AngularJS forces me to get my code clean.
-
-\item \emph{BLOG8:} Isolate Scope and Transclusion are some of the most exciting things about Angular. They allow the building of reusable, encapsulated components, they are syntactically and conceptually elegant and a core part of what makes Angular Angular.
-
-\item \emph{BLOG9:} Errors in bindings don't fire at all.
-
-\item \emph{BLOG9:} You can't put a breakpoint inside \{\{ this expression \}\}.
-
-\item \emph{BLOG9:} When you write in AngularJS you put your logic into your HTML (\mcode{ng-repeat}, \mcode{ng-show}, \mcode{ng-class}, \mcode{ng-model}, \mcode{ng-init}, \mcode{ng-click}, \mcode{ng-switch}, \mcode{ng-if}). Existence of such logic is not as bad as the fact that it is impossible to test this logic with unit tests, this logic can't be debugged and errors don't fire from markup (but this code contains very important logic).
-
-\item \emph{BLOG9:} Errors that occurred in JavaScript are caught by the internal angular interceptor, and interpreted by browser as caught errors (everything that happens in AngularJS, stays in AngularJS).
-
-\item \emph{BLOG9 (comment):}  The null reference exceptions (in templates (HTML)) are swallowed in order to not break the first renders working properly.
-
-\item \emph{BLOG9:} It's unclear why it was necessary to introduce several ways to do the same thing.
-
-\item \emph{BLOG9:} It is without a doubt the most common error that absolutely every AngularJS developer faces (Scope inheritance).
-
-\item \emph{BLOG9:} There is no logical reason to separate logic for 3 methods (\mcode{compile}, \mcode{link}, \mcode{controller}), all this can be easily implemented in a single method.
-
-\item \emph{BLOG9:} Even in order to integrate some code in the angular world, for example some jQuery plugin, you need to wrap it in a directive.
-
-\item \emph{BLOG9:} Since server side rendering adds logic into your HTML and AngularJS writes logic in HTML, there is no clear separation of concerns and as a result you get spaghetti code.
-
-\item \emph{BLOG9:} The only good thing that AngularJS has is that it forces developers to break their logic into modules, and code becomes more granulated.
-
-\item \emph{BLOG10:} Before AngularJS it was \aspas{best practice} to keep function calls out of the HTML. For instance, you should not use the \mcode{onclick} event attributes on HTML elements, but rather attach event listeners via JavaScript. Somehow that was forgotten with AngularJS, and now we are back to embedding JavaScript function calls in the HTML.
-
-\item \emph{BLOG10:} In order to \aspas{teach HTML new tricks} you end up with HTML full of non-HTML elements and attributes.
-
-\item \emph{BLOG10:} We are back to embedding JavaScript function calls in the HTML.
-
-\item \emph{BLOG11:} Angular Batarang is a Chrome extension developed by the Angular team at Google that integrates very nicely as a debugging tool for Angular apps.
 
 \item \emph{BLOG12:} Based on what I've heard, I'm not alone in this. Transclusion is one of those things people often mention when they talk about their difficulties with Angular.
 
