@@ -6,9 +6,19 @@ Repository related to paper submitted to IEEE Software
 * Access date: September-2015
 * URL: https://docs.angularjs.org/guide/unit-testing}
 
+> One of the most useful parts of \mcode{ngMock} is \mcode{\$httpBackend}, which lets us mock XHR requests in tests, and return sample data instead.
+
+> Angular is written with testability in mind, but it still requires that you do the right thing. We tried to make the right thing easy, but if you ignore these guidelines you may end up with an untestable application.
+
+> Angular also provides the \mcode{ngMock} module, which provides mocking for your tests. This is used to inject and mock Angular services within unit tests. In addition, it is able to extend other modules so they are synchronous. Having tests synchronous keeps them much cleaner and easier to work with.
+
 #### [DOC2] API Reference: \mcode{\$compile}
 * Access date:} September-2015
 * URL: https://docs.angularjs.org/api/ng/service/$compile
+
+> There are many different options for a directive.
+
+> The \aspassimples{isolate} scope object hash defines a set of local scope properties derived from attributes on the directive's element. These local properties are useful for aliasing values for templates. The keys in the object hash map to the name of the property on the isolate scope; the values define how the property is bound to the parent scope, via matching attributes on the directive's element
 
 #### [BLOG1] Choosing a JavaScript MVC Framework
 * Access date: June-2015} 
