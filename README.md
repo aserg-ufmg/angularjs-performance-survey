@@ -80,7 +80,7 @@ Repository related to paper submitted to IEEE Software
 * Author: Steven Czerwinksi
 * Author information: Staff Software Engineer at Scalyr.
 
-\item \emph{BLOG5:} This shows the power of AngularJS for encapsulation and separation of concerns.
+> This shows the power of AngularJS for encapsulation and separation of concerns.
 
 #### [BLOG6] Speeding Up AngularJS Apps With Simple Optimizations
 * Access date: August-2015
@@ -162,11 +162,23 @@ Repository related to paper submitted to IEEE Software
 * URL: http://teropa.info/blog/2015/06/09/transclusion.html
 * Author: Tero Parviainen
 
+> Based on what I've heard, I'm not alone in this. Transclusion is one of those things people often mention when they talk about their difficulties with Angular.
+
+> I think the bigger problems (with transclusion) are tangential:
+>> The API is tricky, with its higher-order functions and \aspas{magic arguments}.
+>> Parts of the API are deprecated, and it can be hard to figure out which parts.
+>> The documentation uses lots of big words (\aspas{a transclude linking function pre-bound to the correct transclusion scope}).
+>> There are actually two separate features provided by the same API: Regular transclusion and element transclusion.
+
 #### [BLOG13] An Intervention: Why AngularJS is Worse Than a New ASP.NET WebForms
 * Access date: October-2015
 * URL: https://medium.com/@benastontweet/an-intervention-4535d835e836
 * Author: Ben Aston
 * Author information: Consultant developer specializing in web applications.
+
+> AngularJS brings with it a domain specific language: transclusion, scope, directives, modules, factories and services.
+
+> You could probably sum up AngularJS with this single word: it makes the inclusion of DOM fragments in your page sound novel and complicated.
 
 #### [BLOG14] Scope Creep, a Deep Dive Into Angular's Scope
 * Access date: October-2015
@@ -174,11 +186,17 @@ Repository related to paper submitted to IEEE Software
 * Author: Jonathan Creamer
 * Author information: JavaScript, Ruby, C#, Node, Rails, .NET MVC, MS MVP, Telerik Developer Expert, and IEuserAgent.
 
+> Getting used to the concept of scope in Angular is among the more difficult concepts to fully grok when first being introduced to the magical land of Angular.
+
+> Because of the fact that the scopes do inherit from other scopes, if you create a primitive value (string, number, boolean) on a parent scope, the child scope will have an be able to manipulate the value.
+
 #### [BLOG15] Adding Clarity to Scope Inheritance in Angular
 * Access date: October-2015
 * URL: http://jonathancreamer.com/adding-clarity-to-scope-inheritance-in-angular/
 * Author: Jonathan Creamer
 * Author information: JavaScript, Ruby, C#, Node, Rails, .NET MVC. MS MVP, Telerik Developer Expert, and IEuserAgent.
+
+\item \emph{BLOG15:} The fact is prototypical inheritance in JavaScript presents confusion to a lot of folks out there. In terms of Angular.js that may explain why the concept of \mcode{\$scope} is difficult to grok.
 
 #### [BLOG16] Mastering AngularJS directives
 * Access date: October-2015
@@ -186,11 +204,25 @@ Repository related to paper submitted to IEEE Software
 * Author: Hüseyin Babal
 * Author information: NodeJS, PHP, Java, Elasticsearch, WordPress Plugin/Widget Development, MySQL, MongoDB, SEO, Agile Software Development, Cloud Integration, SCRUM.CSM.
 
+> Directives are one of the most powerful components of AngularJS, helping you extend basic HTML elements/attributes and create reusable and testable code.
+
+> So, what is the link function there? Simply, the link function is the function that you can use to perform directive-specific operations. The directive is not only rendering some HTML code by providing some inputs. You can also bind functions to the directive element, call a service and update the directive value, get directive attributes if it is an \mcode{E} type directive, etc.
+
+> Every directive has its own scope, but you need to be careful about the data binding with the directive declaration. 
+
+> The main advantage of the directive is that it's a reusable component that can be used easily.
+
+> When you use directives inside the template, what you see on the page is the compiled version of the directive. Sometimes, you want to see the actual directive usage for debugging purposes. In order to see the uncompiled version of the current section, you can use \mcode{ng-non-bindable}.
+
 #### [BLOG17] Creating Custom AngularJS Directives Part I - The Fundamentals
 * Access date: September-2015
 * URL: http://weblogs.asp.net/dwahlin/creating-custom-angularjs-directives-part-i-the-fundamentals
 * Author: Dan Wahlin
 * Author information: JavaScript/ES6, Node.js, Angular, HTML5, jQuery, Node.js, ASP.NET MVC, C#.
+
+> AngularJS directives can be a bit intimidating the first time you see them. They offer many different options, have a few cryptic features (and cryptic is my politically correct term for \aspas{what were they thinking here?}), and are generally challenging at first.
+
+> In addition to performing data binding operations with templates, directives can also be used to manipulate the DOM. This is done using the link function shown earlier.
 
 #### [BLOG18] Directive Controller And Link Timing In AngularJS
 * Access date: September-2015
@@ -245,48 +277,6 @@ Repository related to paper submitted to IEEE Software
 
 
 
-
-#### [BLOG5]
-
-
-
-\item \emph{BLOG12:} Based on what I've heard, I'm not alone in this. Transclusion is one of those things people often mention when they talk about their difficulties with Angular.
-
-\item \emph{BLOG12:} I think the bigger problems (with transclusion) are tangential:
-
-\begin{itemize}
-
-\item The API is tricky, with its higher-order functions and \aspas{magic arguments}.
-\item Parts of the API are deprecated, and it can be hard to figure out which parts.
-\item The documentation uses lots of big words (\aspas{a transclude linking function pre-bound to the correct transclusion scope}).
-\item There are actually two separate features provided by the same API: Regular transclusion and element transclusion.
-
-
-\end{itemize}
-
-\item \emph{BLOG13:} AngularJS brings with it a domain specific language: transclusion, scope, directives, modules, factories and services.
-
-\item \emph{BLOG13:} You could probably sum up AngularJS with this single word: it makes the inclusion of DOM fragments in your page sound novel and complicated.
-
-\item \emph{BLOG14:} Getting used to the concept of scope in Angular is among the more difficult concepts to fully grok when first being introduced to the magical land of Angular.
-
-\item \emph{BLOG14:} Because of the fact that the scopes do inherit from other scopes, if you create a primitive value (string, number, boolean) on a parent scope, the child scope will have an be able to manipulate the value.
-
-\item \emph{BLOG15:} The fact is prototypical inheritance in JavaScript presents confusion to a lot of folks out there. In terms of Angular.js that may explain why the concept of \mcode{\$scope} is difficult to grok.
-
-\item \emph{BLOG16:} Directives are one of the most powerful components of AngularJS, helping you extend basic HTML elements/attributes and create reusable and testable code.
-
-\item \emph{BLOG16:} So, what is the link function there? Simply, the link function is the function that you can use to perform directive-specific operations. The directive is not only rendering some HTML code by providing some inputs. You can also bind functions to the directive element, call a service and update the directive value, get directive attributes if it is an \mcode{E} type directive, etc.
-
-\item \emph{BLOG16:} Every directive has its own scope, but you need to be careful about the data binding with the directive declaration. 
-
-\item \emph{BLOG16:} The main advantage of the directive is that it's a reusable component that can be used easily.
-
-\item \emph{BLOG16:} When you use directives inside the template, what you see on the page is the compiled version of the directive. Sometimes, you want to see the actual directive usage for debugging purposes. In order to see the uncompiled version of the current section, you can use \mcode{ng-non-bindable}.
-
-\item \emph{BLOG17:} AngularJS directives can be a bit intimidating the first time you see them. They offer many different options, have a few cryptic features (and cryptic is my politically correct term for \aspas{what were they thinking here?}), and are generally challenging at first.
-
-\item \emph{BLOG17:} In addition to performing data binding operations with templates, directives can also be used to manipulate the DOM. This is done using the link function shown earlier.
 
 \item \emph{BLOG18:} I've talked about the timing of directives in AngularJS a few times before. But, it's a rather complicated topic, so I don't mind digging a bit deeper.
 
