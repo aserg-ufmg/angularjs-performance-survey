@@ -4,7 +4,7 @@ Repository related to paper submitted to IEEE Software
 
 #### [DOC1] Developer Guide: Unit Testing
 * Access date: September-2015
-* URL: https://docs.angularjs.org/guide/unit-testing}
+* URL: https://docs.angularjs.org/guide/unit-testing
 
 > One of the most useful parts of ngMock is \$httpBackend, which lets us mock XHR requests in tests, and return sample data instead.
 
@@ -13,7 +13,7 @@ Repository related to paper submitted to IEEE Software
 > Angular also provides the ngMock module, which provides mocking for your tests. This is used to inject and mock Angular services within unit tests. In addition, it is able to extend other modules so they are synchronous. Having tests synchronous keeps them much cleaner and easier to work with.
 
 #### [DOC2] API Reference: `$compile`
-* Access date:} September-2015
+* Access date:` September-2015
 * URL: https://docs.angularjs.org/api/ng/service/$compile
 
 > There are many different options for a directive.
@@ -21,7 +21,7 @@ Repository related to paper submitted to IEEE Software
 > The isolate scope object hash defines a set of local scope properties derived from attributes on the directive's element. These local properties are useful for aliasing values for templates. The keys in the object hash map to the name of the property on the isolate scope; the values define how the property is bound to the parent scope, via matching attributes on the directive's element
 
 #### [BLOG1] Choosing a JavaScript MVC Framework
-* Access date: June-2015} 
+* Access date: June-2015` 
 * URL: http://www.funnyant.com/choosing-javascript-mvc-framework/
 * Author: Craig McKeachie
 * Author information: Microsoft Certified Solutions Developer.
@@ -38,7 +38,7 @@ Repository related to paper submitted to IEEE Software
 
 > Angular helps you categorize your application building blocks into several types: Controllers, Directives, Factories, Filters, Services and Views (templates).
 
-> The Digest Cycle of angular, which takes care of the \aspas{Magical} dirty checking, has the tendency to surprise developers. It is easy to forget to call \mcode{\$digest()} when running in non-Angular context.
+> The Digest Cycle of angular, which takes care of the Magical dirty checking, has the tendency to surprise developers. It is easy to forget to call `\$digest()` when running in non-Angular context.
 
 > Putting logic inside the templates makes it harder to test, as it becomes impossible to test it in isolation.
 
@@ -58,7 +58,7 @@ Repository related to paper submitted to IEEE Software
 
 > I hate including HTML inline as a string in Javascript, so I definitely wanted to use `templateUrl`. This was all fine and good, and I got my directive up and running. Then I decided it was time to unit test it. That's where the real fun began.
 
-> I discovered that while getting some simple unit tests running wasn't too hard using just Jasmine, unit testing my \mcode{templateUrl} directive was no simple matter.
+> I discovered that while getting some simple unit tests running wasn't too hard using just Jasmine, unit testing my `templateUrl` directive was no simple matter.
 
 > The problem with using `templateUrl` is that Angular uses an HTTP request to go get the file. However, in a unit-testing environment, you don't have the full web server environment and can't actually make the HTTP request. So, you'll get an error when you try to test the directive.
 
@@ -70,7 +70,7 @@ Repository related to paper submitted to IEEE Software
 * Author: Daniel Steigerwald
 * Author information: JavaScript Developer and Consultant. Member of the Google Developers Expert Program.
 
-> Dirty checking, accessors (Ember and Backbone), \mcode{Object.observe} and all that stuff. Wrong! It's slow and brittle and it will consume mobile battery like hungry dog, for no reason.
+> Dirty checking, accessors (Ember and Backbone), `Object.observe` and all that stuff. Wrong! It's slow and brittle and it will consume mobile battery like hungry dog, for no reason.
 
 > Angular is HTML parser. I really don't want to debug any string based parser instead of my code.
 
@@ -88,7 +88,7 @@ Repository related to paper submitted to IEEE Software
 * Author: Todd Motto
 * Author information: Director of Web Development at Mozio. He works with JavaScript and AngularJS.
 
-> You'll get an error thrown from Angular if you're calling \mcode{\$scope.\$apply} in the \aspas{wrong} place, usually too high up the call stack.
+> You'll get an error thrown from Angular if you're calling `\$scope.\$apply` in the \aspas{wrong` place, usually too high up the call stack.
 
 #### [BLOG7] AngularJS: My Solution to the mcodeng-repeat Performance Problem
 * Access date: July-2015
@@ -116,9 +116,9 @@ Repository related to paper submitted to IEEE Software
 
 > Errors in bindings don't fire at all.
 
-> You can't put a breakpoint inside \{\{ this expression \}\}.
+> You can't put a breakpoint inside \{\{ this expression \`\`.
 
-> When you write in AngularJS you put your logic into your HTML (\mcode{ng-repeat}, \mcode{ng-show}, \mcode{ng-class}, \mcode{ng-model}, \mcode{ng-init}, \mcode{ng-click}, \mcode{ng-switch}, \mcode{ng-if}). Existence of such logic is not as bad as the fact that it is impossible to test this logic with unit tests, this logic can't be debugged and errors don't fire from markup (but this code contains very important logic).
+> When you write in AngularJS you put your logic into your HTML (`ng-repeat`, `ng-show`, `ng-class`, `ng-model`, `ng-init`, `ng-click`, `ng-switch`, `ng-if`). Existence of such logic is not as bad as the fact that it is impossible to test this logic with unit tests, this logic can't be debugged and errors don't fire from markup (but this code contains very important logic).
 
 > Errors that occurred in JavaScript are caught by the internal angular interceptor, and interpreted by browser as caught errors (everything that happens in AngularJS, stays in AngularJS).
 
@@ -128,7 +128,7 @@ Repository related to paper submitted to IEEE Software
 
 > It is without a doubt the most common error that absolutely every AngularJS developer faces (Scope inheritance).
 
-> There is no logical reason to separate logic for 3 methods (\mcode{compile}, \mcode{link}, \mcode{controller}), all this can be easily implemented in a single method.
+> There is no logical reason to separate logic for 3 methods (`compile`, `link`, `controller`), all this can be easily implemented in a single method.
 
 > Even in order to integrate some code in the angular world, for example some jQuery plugin, you need to wrap it in a directive.
 
@@ -143,9 +143,9 @@ Repository related to paper submitted to IEEE Software
 * Author: Jakob Jenkov
 * Author information: Founder and CEO at Jenkov Aps.
 
-> Before AngularJS it was \aspas{best practice} to keep function calls out of the HTML. For instance, you should not use the \mcode{onclick} event attributes on HTML elements, but rather attach event listeners via JavaScript. Somehow that was forgotten with AngularJS, and now we are back to embedding JavaScript function calls in the HTML.
+> Before AngularJS it was \aspas{best practice` to keep function calls out of the HTML. For instance, you should not use the `onclick` event attributes on HTML elements, but rather attach event listeners via JavaScript. Somehow that was forgotten with AngularJS, and now we are back to embedding JavaScript function calls in the HTML.
 
-> In order to \aspas{teach HTML new tricks} you end up with HTML full of non-HTML elements and attributes.
+> In order to \aspas{teach HTML new tricks` you end up with HTML full of non-HTML elements and attributes.
 
 > We are back to embedding JavaScript function calls in the HTML.
 
@@ -165,10 +165,10 @@ Repository related to paper submitted to IEEE Software
 > Based on what I've heard, I'm not alone in this. Transclusion is one of those things people often mention when they talk about their difficulties with Angular.
 
 > I think the bigger problems (with transclusion) are tangential:
->> The API is tricky, with its higher-order functions and \aspas{magic arguments}.
->> Parts of the API are deprecated, and it can be hard to figure out which parts.
->> The documentation uses lots of big words (\aspas{a transclude linking function pre-bound to the correct transclusion scope}).
->> There are actually two separate features provided by the same API: Regular transclusion and element transclusion.
+>* The API is tricky, with its higher-order functions and \aspas{magic arguments`.
+>* Parts of the API are deprecated, and it can be hard to figure out which parts.
+>* The documentation uses lots of big words (\aspas{a transclude linking function pre-bound to the correct transclusion scope`).
+>* There are actually two separate features provided by the same API: Regular transclusion and element transclusion.
 
 #### [BLOG13] An Intervention: Why AngularJS is Worse Than a New ASP.NET WebForms
 * Access date: October-2015
@@ -196,7 +196,7 @@ Repository related to paper submitted to IEEE Software
 * Author: Jonathan Creamer
 * Author information: JavaScript, Ruby, C#, Node, Rails, .NET MVC. MS MVP, Telerik Developer Expert, and IEuserAgent.
 
-\item \emph{BLOG15:} The fact is prototypical inheritance in JavaScript presents confusion to a lot of folks out there. In terms of Angular.js that may explain why the concept of \mcode{\$scope} is difficult to grok.
+\item \emph{BLOG15:` The fact is prototypical inheritance in JavaScript presents confusion to a lot of folks out there. In terms of Angular.js that may explain why the concept of `\$scope` is difficult to grok.
 
 #### [BLOG16] Mastering AngularJS directives
 * Access date: October-2015
@@ -206,13 +206,13 @@ Repository related to paper submitted to IEEE Software
 
 > Directives are one of the most powerful components of AngularJS, helping you extend basic HTML elements/attributes and create reusable and testable code.
 
-> So, what is the link function there? Simply, the link function is the function that you can use to perform directive-specific operations. The directive is not only rendering some HTML code by providing some inputs. You can also bind functions to the directive element, call a service and update the directive value, get directive attributes if it is an \mcode{E} type directive, etc.
+> So, what is the link function there? Simply, the link function is the function that you can use to perform directive-specific operations. The directive is not only rendering some HTML code by providing some inputs. You can also bind functions to the directive element, call a service and update the directive value, get directive attributes if it is an `E` type directive, etc.
 
 > Every directive has its own scope, but you need to be careful about the data binding with the directive declaration. 
 
 > The main advantage of the directive is that it's a reusable component that can be used easily.
 
-> When you use directives inside the template, what you see on the page is the compiled version of the directive. Sometimes, you want to see the actual directive usage for debugging purposes. In order to see the uncompiled version of the current section, you can use \mcode{ng-non-bindable}.
+> When you use directives inside the template, what you see on the page is the compiled version of the directive. Sometimes, you want to see the actual directive usage for debugging purposes. In order to see the uncompiled version of the current section, you can use `ng-non-bindable`.
 
 #### [BLOG17] Creating Custom AngularJS Directives Part I - The Fundamentals
 * Access date: September-2015
@@ -220,7 +220,7 @@ Repository related to paper submitted to IEEE Software
 * Author: Dan Wahlin
 * Author information: JavaScript/ES6, Node.js, Angular, HTML5, jQuery, Node.js, ASP.NET MVC, C#.
 
-> AngularJS directives can be a bit intimidating the first time you see them. They offer many different options, have a few cryptic features (and cryptic is my politically correct term for \aspas{what were they thinking here?}), and are generally challenging at first.
+> AngularJS directives can be a bit intimidating the first time you see them. They offer many different options, have a few cryptic features (and cryptic is my politically correct term for \aspas{what were they thinking here?`), and are generally challenging at first.
 
 > In addition to performing data binding operations with templates, directives can also be used to manipulate the DOM. This is done using the link function shown earlier.
 
@@ -262,13 +262,13 @@ Repository related to paper submitted to IEEE Software
 * Access date: October-2015
 * URL: http://stackoverflow.com/q/14793692
 
-> As I read through the Angular tutorials, I really like a lot of it, but isn't \aspas{\mcode{ng-click}} the equivalent of an inline \mcode{onClick}? My understanding was that the JavaScript community had determined inline JavaScript event handlers in your HTML was \aspas{bad practice}.
+> As I read through the Angular tutorials, I really like a lot of it, but isn't `ng-click` the equivalent of an inline `onClick`? My understanding was that the JavaScript community had determined inline JavaScript event handlers in your HTML was bad practice.
 
 #### [Q&A5] AngularJS: Is mcode{ngClick a Good Practice Why is There no ng-event in AngularJS?
 * Access date: September-2015
 * URL: http://stackoverflow.com/q/14346073
 
-> I understand that \mcode{ng-click} is technically not the same as \mcode{onclick}, but both are placed in the markup. I thought that would be a \aspas{bad practice}? Why is this one of the core concepts of AngularJS, if most people say this is \aspas{bad}? I thought it would be better to select the DOM element from JavaScript and not to place logic in the markup.
+> I understand that `ng-click` is technically not the same as `onclick`, but both are placed in the markup. I thought that would be a \aspas{bad practice`? Why is this one of the core concepts of AngularJS, if most people say this is bad? I thought it would be better to select the DOM element from JavaScript and not to place logic in the markup.
 
 
 #### [Q&A6] How to not Let Angular Spoil All Your HTML With Logic Code?
@@ -285,21 +285,21 @@ Repository related to paper submitted to IEEE Software
 
 > Now about adding logic to the views, if we are talking about business logic then it's a big no no. Use a method on your controller that will evaluate stuff using the service.
 
-> If we are talking about \mcode{ng-if}/\mcode{ng-show} conditions then only if they are small and \aspas{readable} conditions I would add them to the view. When it's more than that, I move them to the controller for debugging issues and since I believe the HTML should be readable.
+> If we are talking about `ng-if`/`ng-show` conditions then only if they are small and readable conditions I would add them to the view. When it's more than that, I move them to the controller for debugging issues and since I believe the HTML should be readable.
 
 
 #### [Q&A8]Using scope.$watch and scope.$apply in AngularJS
 * Access date: September-2015
 * URL: http://stackoverflow.com/q/15112584
 
-> I don't understand how to use \mcode{\$scope.\$watch} and \mcode{\$scope.\$apply}. The official documentation isn't helpful.
+> I don't understand how to use `\$scope.\$watch` and `\$scope.\$apply`. The official documentation isn't helpful.
 
 #### [Q&A9] What Does $scope.$apply() Do?
 * Access date: September-2015
 * URL: http://stackoverflow.com/q/18710478
 * Author: Dan Prince
 
-> I've been using \mcode{\$scope.\$apply()} to update the bindings for my models when I receive data through websockets in my Angular apps and it works. But what does it actually do and why does it need to be called to achieve the update? 
+> I've been using `\$scope.\$apply()` to update the bindings for my models when I receive data through websockets in my Angular apps and it works. But what does it actually do and why does it need to be called to achieve the update? 
 
 #### [Q&A10] Correct Way to Integrate jQuery Plugins in AngularJS
 * Access date: October-2015
