@@ -1,13 +1,11 @@
 # survey-angularjs-performance
 Repository related to paper submitted to IEEE Software
 
-
-
-* [DOC1] Developer Guide: Unit Testing
+#### [DOC1] Developer Guide: Unit Testing
 * Access date: September-2015
 * URL: https://docs.angularjs.org/guide/unit-testing}
 
-* [DOC2] API Reference: \mcode{\$compile}\\
+#### [DOC2] API Reference: \mcode{\$compile}\\
 * Access date:} September-2015\\
 * URL: https://docs.angularjs.org/api/ng/service/$compile}
 
