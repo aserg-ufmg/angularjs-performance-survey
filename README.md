@@ -1,20 +1,15 @@
-# survey-angularjs
-Repository related to paper submitted to JSS
+# survey-angularjs-performance
+Repository related to paper submitted to IEEE Software
 
 
 
-## Identifier:DOC1
+* [DOC1] Developer Guide: Unit Testing
+* Access date: September-2015
+* URL: https://docs.angularjs.org/guide/unit-testing}
 
-* Title:} Developer Guide: Unit Testing\\
+* [DOC2] API Reference: \mcode{\$compile}\\
 * Access date:} September-2015\\
-* URL:} \url{https://docs.angularjs.org/guide/unit-testing}
-
-\item \
-
-\textbf{Identifier:} DOC2\\
-\textbf{Title:} API Reference: \mcode{\$compile}\\
-\textbf{Access date:} September-2015\\
-\textbf{URL:} \url{https://docs.angularjs.org/api/ng/service/$compile}
+* URL: https://docs.angularjs.org/api/ng/service/$compile}
 
 \item \
 
