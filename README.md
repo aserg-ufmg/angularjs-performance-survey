@@ -2,8 +2,6 @@
 
 ## Phase 1: Mapping Study 
 
-List of documents collected and reviewed in the initial mapping study.
-
 #### [DOC1] Developer Guide: Unit Testing
 * Access date: September-2015
 * URL: https://docs.angularjs.org/guide/unit-testing
