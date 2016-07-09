@@ -1,6 +1,6 @@
 # AngularJS Performance: A Survey Study
 
-Repository related to paper submitted to IEEE Software
+List of documents collected and reviewed in the initial mapping study.
 
 #### [DOC1] Developer Guide: Unit Testing
 * Access date: September-2015
