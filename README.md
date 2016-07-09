@@ -12,7 +12,7 @@ Repository related to paper submitted to IEEE Software
 
 > Angular also provides the ngMock module, which provides mocking for your tests. This is used to inject and mock Angular services within unit tests. In addition, it is able to extend other modules so they are synchronous. Having tests synchronous keeps them much cleaner and easier to work with.
 
-#### [DOC2] API Reference: \mcode{\$compile}
+#### [DOC2] API Reference: `$compile`
 * Access date:} September-2015
 * URL: https://docs.angularjs.org/api/ng/service/$compile
 
@@ -56,11 +56,11 @@ Repository related to paper submitted to IEEE Software
 * Author: Chris Hooker
 * Author information: The author is a graduate of MIT, and has over 15 years of software development experience.
 
-> I hate including HTML inline as a string in Javascript, so I definitely wanted to use \mcode{templateUrl}. This was all fine and good, and I got my directive up and running. Then I decided it was time to unit test it. That's where the real fun began.
+> I hate including HTML inline as a string in Javascript, so I definitely wanted to use `templateUrl`. This was all fine and good, and I got my directive up and running. Then I decided it was time to unit test it. That's where the real fun began.
 
 > I discovered that while getting some simple unit tests running wasn't too hard using just Jasmine, unit testing my \mcode{templateUrl} directive was no simple matter.
 
-> The problem with using \mcode{templateUrl} is that Angular uses an HTTP request to go get the file. However, in a unit-testing environment, you don't have the full web server environment and can't actually make the HTTP request. So, you'll get an error when you try to test the directive.
+> The problem with using `templateUrl` is that Angular uses an HTTP request to go get the file. However, in a unit-testing environment, you don't have the full web server environment and can't actually make the HTTP request. So, you'll get an error when you try to test the directive.
 
 > You want to pre-process your HTML template and convert in into Javascript, which can be testing without any need for HTTP requests.
 
@@ -230,94 +230,88 @@ Repository related to paper submitted to IEEE Software
 * Author: Ben Nadel
 * Author information: Adobe Community Expert as well as an Adobe Certified Professional in Advanced ColdFusion.
 
+> I've talked about the timing of directives in AngularJS a few times before. But, it's a rather complicated topic, so I don't mind digging a bit deeper.
+
+> As the DOM (Document Object Model) is compiled by AngularJS, the directive controllers and link functions execute at different parts of the compile lifecycle.
+
+> This is an important difference. While you can only access the DOM tree in the bottom-up linking phase, the directive controller can provide a hook into the top-down lifecycle. This can be critical if you have to handle DOM events based on when elements of the DOM tree came into existence. The linking phase can never give you that because it's executed in reverse.
+
 #### [Q&A1] Template Type Conversion Errors are Difficult to Debug
 * Access date: September-2015
 * URL: https://github.com/angular/angular.js/issues/1974
+
+> Template type conversion errors are difficult to debug.
+
+> FYI the only line in the stack trace that references my actual document (index.html, line 500), line 500 is past the end of the source document, so it's referencing some angular script injected into the header, thus does not seem to be useful for debugging.
 
 #### [Q&A2] Why Don't AngularJS Errors in the HTML Show Up in the Console?
 * Access date: September-2015
 * URL: http://stackoverflow.com/q/26227596
 
+> Expressions are meant to handle very simple logic, and are optimized for simplicity and not breaking your app.
+
 #### [Q&A3] Separating JS Logic From Angular Templates
 * Access date: October-2015
 * URL: https://groups.google.com/forum/#!topic/angular/pHSMrphDJhM
+
+> It seems as though the developers built the entire framework and wrote the documentation promoting the idea that it's A-OK to frankenstein JavaScript expressions into your HTML.
+
+> Architecturally, the way jQuery solves problems is not the best. Clayton pointed out that it's difficult to test, but it also leaves intent nebulous. Directives extend DOM functionality (and we can test them within and without the view) and so belong within the DOM. When you use jQuery to programmatically insert on-click behavior, whoever is reading the view (designer or developer) doesn't know what something does. With AngularJS, that becomes quite clear.
 
 #### [Q&A4] AngularJS Use of Inline JavaScript in HTML Attributes is not Bad Practice?
 * Access date: October-2015
 * URL: http://stackoverflow.com/q/14793692
 
+> As I read through the Angular tutorials, I really like a lot of it, but isn't \aspas{\mcode{ng-click}} the equivalent of an inline \mcode{onClick}? My understanding was that the JavaScript community had determined inline JavaScript event handlers in your HTML was \aspas{bad practice}.
+
 #### [Q&A5] AngularJS: Is mcode{ngClick a Good Practice Why is There no ng-event in AngularJS?
 * Access date: September-2015
 * URL: http://stackoverflow.com/q/14346073
+
+> I understand that \mcode{ng-click} is technically not the same as \mcode{onclick}, but both are placed in the markup. I thought that would be a \aspas{bad practice}? Why is this one of the core concepts of AngularJS, if most people say this is \aspas{bad}? I thought it would be better to select the DOM element from JavaScript and not to place logic in the markup.
+
 
 #### [Q&A6] How to not Let Angular Spoil All Your HTML With Logic Code?
 * Access date: October-2015
 * URL: http://www.reddit.com/r/angularjs/comments/2b15dv/how_to_not_let_angular_spoil_all_your_html_with/
 
+> I'm relatively new to angular, and the more I use it the more I insert ng-this and ng-that into my HTML and soon I have a mess like this.
+
 #### [Q&A7] Should AngularJS Logic Be Placed in HTML File?
 * Access date: September-2015
 * URL: http://stackoverflow.com/a/24845815
 
+> I am very new to AngularJS. Now when I saw the code, I was very curious about all the logic that is placed in the HTML code.
+
+> Now about adding logic to the views, if we are talking about business logic then it's a big no no. Use a method on your controller that will evaluate stuff using the service.
+
+> If we are talking about \mcode{ng-if}/\mcode{ng-show} conditions then only if they are small and \aspas{readable} conditions I would add them to the view. When it's more than that, I move them to the controller for debugging issues and since I believe the HTML should be readable.
+
+
 #### [Q&A8]Using scope.$watch and scope.$apply in AngularJS
 * Access date: September-2015
 * URL: http://stackoverflow.com/q/15112584
+
+> I don't understand how to use \mcode{\$scope.\$watch} and \mcode{\$scope.\$apply}. The official documentation isn't helpful.
 
 #### [Q&A9] What Does $scope.$apply() Do?
 * Access date: September-2015
 * URL: http://stackoverflow.com/q/18710478
 * Author: Dan Prince
 
+> I've been using \mcode{\$scope.\$apply()} to update the bindings for my models when I receive data through websockets in my Angular apps and it works. But what does it actually do and why does it need to be called to achieve the update? 
+
 #### [Q&A10] Correct Way to Integrate jQuery Plugins in AngularJS
 * Access date: October-2015
 * URL: http://stackoverflow.com/q/16935095
+
+> I was wondering what is the correct way to integrate jQuery plugins into my angular app. I've found several tutorials and screen-casts but they seem catered to a specific plugin. 
+
+> If you are using a jQuery plugin, do not put the code in the controller. Instead create a directive and put the code that you would normally have inside the link function of the directive. 
 
 #### [Q&A11:] Difference Between the controller, link and compile Functions When Defining a Directive
 * Access date: October-2015
 * URL: http://stackoverflow.com/q/12546945
 
-
-
-
-\item \emph{BLOG18:} I've talked about the timing of directives in AngularJS a few times before. But, it's a rather complicated topic, so I don't mind digging a bit deeper.
-
-\item \emph{BLOG18:} As the DOM (Document Object Model) is compiled by AngularJS, the directive controllers and link functions execute at different parts of the compile lifecycle.
-
-\item \emph{BLOG18:} This is an important difference. While you can only access the DOM tree in the bottom-up linking phase, the directive controller can provide a hook into the top-down lifecycle. This can be critical if you have to handle DOM events based on when elements of the DOM tree came into existence. The linking phase can never give you that because it's executed in reverse.
-
-
-
-
-
-\item \emph{Q\&A1:} Template type conversion errors are difficult to debug.
-
-\item \emph{Q\&A1:} FYI the only line in the stack trace that references my actual document (index.html, line 500), line 500 is past the end of the source document, so it's referencing some angular script injected into the header, thus does not seem to be useful for debugging.
-
-\item \emph{Q\&A2:} Expressions are meant to handle very simple logic, and are optimized for simplicity and not breaking your app.
-
-\item \emph{Q\&A8:} I don't understand how to use \mcode{\$scope.\$watch} and \mcode{\$scope.\$apply}. The official documentation isn't helpful.
-
-\item \emph{Q\&A3:} It seems as though the developers built the entire framework and wrote the documentation promoting the idea that it's A-OK to frankenstein JavaScript expressions into your HTML.
-
-\item \emph{Q\&A3:} Architecturally, the way jQuery solves problems is not the best. Clayton pointed out that it's difficult to test, but it also leaves intent nebulous. Directives extend DOM functionality (and we can test them within and without the view) and so belong within the DOM. When you use jQuery to programmatically insert on-click behavior, whoever is reading the view (designer or developer) doesn't know what something does. With AngularJS, that becomes quite clear.
-
-\item \emph{Q\&A4:} As I read through the Angular tutorials, I really like a lot of it, but isn't \aspas{\mcode{ng-click}} the equivalent of an inline \mcode{onClick}? My understanding was that the JavaScript community had determined inline JavaScript event handlers in your HTML was \aspas{bad practice}.
-
-\item \emph{Q\&A5:} I understand that \mcode{ng-click} is technically not the same as \mcode{onclick}, but both are placed in the markup. I thought that would be a \aspas{bad practice}? Why is this one of the core concepts of AngularJS, if most people say this is \aspas{bad}? I thought it would be better to select the DOM element from JavaScript and not to place logic in the markup.
-
-\item \emph{Q\&A6:} I'm relatively new to angular, and the more I use it the more I insert ng-this and ng-that into my HTML and soon I have a mess like this.
-
-\item \emph{Q\&A7:} I am very new to AngularJS. Now when I saw the code, I was very curious about all the logic that is placed in the HTML code.
-
-\item \emph{Q\&A7:} Now about adding logic to the views, if we are talking about business logic then it's a big no no. Use a method on your controller that will evaluate stuff using the service.
-
-\item \emph{Q\&A7:} If we are talking about \mcode{ng-if}/\mcode{ng-show} conditions then only if they are small and \aspas{readable} conditions I would add them to the view. When it's more than that, I move them to the controller for debugging issues and since I believe the HTML should be readable.
-
-
-\item \emph{Q\&A9:} I've been using \mcode{\$scope.\$apply()} to update the bindings for my models when I receive data through websockets in my Angular apps and it works. But what does it actually do and why does it need to be called to achieve the update? 
-
-\item \emph{Q\&A10:} I was wondering what is the correct way to integrate jQuery plugins into my angular app. I've found several tutorials and screen-casts but they seem catered to a specific plugin. 
-
-\item \emph{Q\&A10:} If you are using a jQuery plugin, do not put the code in the controller. Instead create a directive and put the code that you would normally have inside the link function of the directive. 
-
-\item \emph{Q\&A11:} Some places seem to use the controller function for directive logic and other use link. The tabs example on the angular homepage uses controller for one and link for other directive. What is the difference between two?
+> Some places seem to use the controller function for directive logic and other use link. The tabs example on the angular homepage uses controller for one and link for other directive. What is the difference between two?
 
