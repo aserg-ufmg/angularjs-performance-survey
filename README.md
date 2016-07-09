@@ -88,7 +88,7 @@ Repository related to paper submitted to IEEE Software
 * Author: Todd Motto
 * Author information: Director of Web Development at Mozio. He works with JavaScript and AngularJS.
 
-> You'll get an error thrown from Angular if you're calling `\$scope.\$apply` in the \aspas{wrong` place, usually too high up the call stack.
+> You'll get an error thrown from Angular if you're calling `\$scope.\$apply` in the wrong place, usually too high up the call stack.
 
 #### [BLOG7] AngularJS: My Solution to the mcodeng-repeat Performance Problem
 * Access date: July-2015
@@ -143,9 +143,9 @@ Repository related to paper submitted to IEEE Software
 * Author: Jakob Jenkov
 * Author information: Founder and CEO at Jenkov Aps.
 
-> Before AngularJS it was \aspas{best practice` to keep function calls out of the HTML. For instance, you should not use the `onclick` event attributes on HTML elements, but rather attach event listeners via JavaScript. Somehow that was forgotten with AngularJS, and now we are back to embedding JavaScript function calls in the HTML.
+> Before AngularJS it was best practice to keep function calls out of the HTML. For instance, you should not use the `onclick` event attributes on HTML elements, but rather attach event listeners via JavaScript. Somehow that was forgotten with AngularJS, and now we are back to embedding JavaScript function calls in the HTML.
 
-> In order to \aspas{teach HTML new tricks` you end up with HTML full of non-HTML elements and attributes.
+> In order to teach HTML new tricks you end up with HTML full of non-HTML elements and attributes.
 
 > We are back to embedding JavaScript function calls in the HTML.
 
@@ -165,9 +165,9 @@ Repository related to paper submitted to IEEE Software
 > Based on what I've heard, I'm not alone in this. Transclusion is one of those things people often mention when they talk about their difficulties with Angular.
 
 > I think the bigger problems (with transclusion) are tangential:
->* The API is tricky, with its higher-order functions and \aspas{magic arguments`.
+>* The API is tricky, with its higher-order functions and magic arguments.
 >* Parts of the API are deprecated, and it can be hard to figure out which parts.
->* The documentation uses lots of big words (\aspas{a transclude linking function pre-bound to the correct transclusion scope`).
+>* The documentation uses lots of big words (a transclude linking function pre-bound to the correct transclusion scope).
 >* There are actually two separate features provided by the same API: Regular transclusion and element transclusion.
 
 #### [BLOG13] An Intervention: Why AngularJS is Worse Than a New ASP.NET WebForms
@@ -196,7 +196,7 @@ Repository related to paper submitted to IEEE Software
 * Author: Jonathan Creamer
 * Author information: JavaScript, Ruby, C#, Node, Rails, .NET MVC. MS MVP, Telerik Developer Expert, and IEuserAgent.
 
-\item \emph{BLOG15:` The fact is prototypical inheritance in JavaScript presents confusion to a lot of folks out there. In terms of Angular.js that may explain why the concept of `\$scope` is difficult to grok.
+> The fact is prototypical inheritance in JavaScript presents confusion to a lot of folks out there. In terms of Angular.js that may explain why the concept of `\$scope` is difficult to grok.
 
 #### [BLOG16] Mastering AngularJS directives
 * Access date: October-2015
@@ -220,7 +220,7 @@ Repository related to paper submitted to IEEE Software
 * Author: Dan Wahlin
 * Author information: JavaScript/ES6, Node.js, Angular, HTML5, jQuery, Node.js, ASP.NET MVC, C#.
 
-> AngularJS directives can be a bit intimidating the first time you see them. They offer many different options, have a few cryptic features (and cryptic is my politically correct term for \aspas{what were they thinking here?`), and are generally challenging at first.
+> AngularJS directives can be a bit intimidating the first time you see them. They offer many different options, have a few cryptic features (and cryptic is my politically correct term for what were they thinking here?), and are generally challenging at first.
 
 > In addition to performing data binding operations with templates, directives can also be used to manipulate the DOM. This is done using the link function shown earlier.
 
@@ -268,7 +268,7 @@ Repository related to paper submitted to IEEE Software
 * Access date: September-2015
 * URL: http://stackoverflow.com/q/14346073
 
-> I understand that `ng-click` is technically not the same as `onclick`, but both are placed in the markup. I thought that would be a \aspas{bad practice`? Why is this one of the core concepts of AngularJS, if most people say this is bad? I thought it would be better to select the DOM element from JavaScript and not to place logic in the markup.
+> I understand that `ng-click` is technically not the same as `onclick`, but both are placed in the markup. I thought that would be a bad practice? Why is this one of the core concepts of AngularJS, if most people say this is bad? I thought it would be better to select the DOM element from JavaScript and not to place logic in the markup.
 
 
 #### [Q&A6] How to not Let Angular Spoil All Your HTML With Logic Code?
