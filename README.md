@@ -1,5 +1,7 @@
 # AngularJS Performance: A Survey Study
 
+## Phase 1: Mapping Study 
+
 List of documents collected and reviewed in the initial mapping study.
 
 #### [DOC1] Developer Guide: Unit Testing
@@ -314,4 +316,8 @@ List of documents collected and reviewed in the initial mapping study.
 * URL: http://stackoverflow.com/q/12546945
 
 > Some places seem to use the controller function for directive logic and other use link. The tabs example on the angular homepage uses controller for one and link for other directive. What is the difference between two?
+
+## Phase 2: Survey
+
+https://github.com/aserg-ufmg/survey-angularjs-performance/blob/master/AngularJS-Performance-Form.pdf
 
