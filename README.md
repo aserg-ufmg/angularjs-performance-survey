@@ -179,7 +179,7 @@
 
 > I just found yesterday a less known easy way to speed up angular : turn off angular’s debug features!
 
-#### [BLOG11] AngularJS: My Solution to the mcode{ng-repeat` Performance Problem
+#### [BLOG11] AngularJS: My Solution to `ng-repeat` Performance Problem
 * Access date: July-2015
 * URL: http://www.williambrownstreet.net/blog/2013/07/angularjs-my-solution-to-the-ng-repeat-performance-problem/
 * Author: Thierry Nicola
