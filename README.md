@@ -21,7 +21,7 @@
 
 > Usually, you don't call `\$digest()` directly in controllers or in directives. Instead, you should call `\$apply()` (typically from within a directive), which will force a `\$digest()`.
 
-#### [DOC3] API Reference: mcode{ngRepeat`
+#### [DOC3] API Reference: `ngRepeat`
 * Access date: June-2015
 * URL: https://docs.angularjs.org/api/ng/directive/ngRepeat
 
@@ -165,7 +165,7 @@
 
 > Angular 1.3 added `::` notation to allow one time binding. Angular will wait for a value to stabilize after its first series of digest cycles; after that, Angular will remove the watcher forgetting about that binding. If you are on pre 1.3 version of Angular you can use this library to achieve similar results.
 
-> Use `\$watchCollection` instead of mcode{\$watch` (with a 3rd parameter).
+> Use `\$watchCollection` instead of `$watch` (with a 3rd parameter).
 
 > If you know there is going to be a lot of changes coming from an `ng-model`, you can de-bounce the input. For example if you have a search input like Google, you can de-bounce it by setting the following `ng-model` option: `ng-model-options="{ debounce: 250 `"`. This will ensure that the digest cycle due to the changes in this input model will get triggered no more than once per 250ms.
 
