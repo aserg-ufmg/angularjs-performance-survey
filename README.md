@@ -6,14 +6,14 @@
 * Access date: June-2015
 * URL: https://docs.angularjs.org/guide/scope
 
-> If a \mcode{\$watch} changes the value of the model, it will force additional digest cycle.
+> If a `\$watch` changes the value of the model, it will force additional digest cycle.
 
 > Dirty checking the scope for property changes is a common operation in Angular and for this reason the dirty checking function must be efficient. Care should be taken that the dirty checking function does not do any DOM access, as DOM access is orders of magnitude slower than property access on JavaScript object.
 
 > Dirty checking can be done with three strategies: By reference, by collection contents, and by value.
 
 
-#### [DOC2] API Reference: mcode{$rootScope.Scope}
+#### [DOC2] API Reference: `$rootScope.Scope`
 * Access date: June-2015
 * URL: https://docs.angularjs.org/api/ng/type/$rootScope.Scope
 
