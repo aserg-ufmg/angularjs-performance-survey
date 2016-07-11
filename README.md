@@ -17,19 +17,19 @@
 * Access date: June-2015
 * URL: https://docs.angularjs.org/api/ng/type/$rootScope.Scope
 
-> \mcode{\$destroy()} must be called on a scope when it is desired for the scope and its child scopes to be permanently detached from the parent and thus stop participating in model change detection and listener notification.
+> `\$destroy()` must be called on a scope when it is desired for the scope and its child scopes to be permanently detached from the parent and thus stop participating in model change detection and listener notification.
 
-> Usually, you don't call \mcode{\$digest()} directly in controllers or in directives. Instead, you should call \mcode{\$apply()} (typically from within a directive), which will force a \mcode{\$digest()}.
+> Usually, you don't call `\$digest()` directly in controllers or in directives. Instead, you should call `\$apply()` (typically from within a directive), which will force a `\$digest()`.
 
-#### [DOC3] API Reference: mcode{ngRepeat}
+#### [DOC3] API Reference: mcode{ngRepeat`
 * Access date: June-2015
 * URL: https://docs.angularjs.org/api/ng/directive/ngRepeat
 
-> The \mcode{ngRepeat} directive instantiates a template once per item from a collection.
+> The `ngRepeat` directive instantiates a template once per item from a collection.
 
-> Special properties are exposed on the local scope of each template instance: \mcode{\$index}, \mcode{\$first}, \mcode{\$middle}, \mcode{\$last}, \mcode{\$even} and \mcode{\$odd}. Creating aliases for these properties is possible with ngInit. This may be useful when, for instance, nesting ngRepeats.
+> Special properties are exposed on the local scope of each template instance: `\$index`, `\$first`, `\$middle`, `\$last`, `\$even` and `\$odd`. Creating aliases for these properties is possible with ngInit. This may be useful when, for instance, nesting ngRepeats.
 
-> \mcode{ngRepeat} (as well as other ng directives) supports extending the range of the repeater by defining explicit start and end points by using \mcode{ng-repeat-start} and \mcode{ng-repeat-end}.
+> `ngRepeat` (as well as other ng directives) supports extending the range of the repeater by defining explicit start and end points by using `ng-repeat-start` and `ng-repeat-end`.
 
 
 #### [BLOG1] Why You Should Not Use Angularjs
@@ -42,7 +42,7 @@
 
 > Angular even imposes restrictions on how rich UI you can write and this is not some ephemeral or distant limit you will never experience. It's only 2000 watchers, and if you develop more or less large applications, you will undoubtedly run into this limitation.
 
-> When the user loads the page he may see \{\{expressions in brackets\}\}. For these purposes AngularJS introduces new directives: ngCloack, ngBind.
+> When the user loads the page he may see \{\{expressions in brackets\`\`. For these purposes AngularJS introduces new directives: ngCloack, ngBind.
 
 > (comment): That number is made up. Not true. Originally shared by Misko on StackOverflow. I'll get him to correct it. Complexity of an expression is often more important than the pure number of expressions. But in general when it comes to pure count we are talking about orders of magnitude bigger numbers than 2k (based on our benchmarks).
 
@@ -66,7 +66,7 @@
 * Author: Peter-Paul Koch
 * Author Information: Mobile platform strategist, consultant, and trainer.
 
-> What worries me is that this non-performant mode is Angular's default (talking about \mcode{ng-repeat} directive).
+> What worries me is that this non-performant mode is Angular's default (talking about `ng-repeat` directive).
 
 #### [BLOG4] What's wrong with Angular
 * Access date: July-2015
@@ -81,7 +81,7 @@
 * URL: http://lhorie.github.io/mithril-blog/lessons-learned-from-angular.html
 * Author Information: Developer in the project Mithril.
 
-> Another problem related to Angular's re-implementation of scope is the steep performance degradation when things like grids grow past a modest size. Often things look ok with test data, but with production-level data volume, you are suddenly forced to discover about Angular internal concepts like watchers, dirty checking, apply cycles, etc, or you need to do massively time consuming audits of the code base in order to figure out the feasibility of adding the \mcode{ng-bindOnce} plugin, or maybe you need to completely rewrite a top-level \mcode{ng-repeat} to use the \mcode{ng-grid} plugin instead.
+> Another problem related to Angular's re-implementation of scope is the steep performance degradation when things like grids grow past a modest size. Often things look ok with test data, but with production-level data volume, you are suddenly forced to discover about Angular internal concepts like watchers, dirty checking, apply cycles, etc, or you need to do massively time consuming audits of the code base in order to figure out the feasibility of adding the `ng-bindOnce` plugin, or maybe you need to completely rewrite a top-level `ng-repeat` to use the `ng-grid` plugin instead.
 
 > It's extremely difficult to reason about Angular performance, and standard tools don't help very much.
 
@@ -109,12 +109,12 @@
 * Author: Alexey Migutsky
 * Author Information: Passionate software engineer, working with Scala, NodeJS and frontend technologies like Angular, ReactJS, HTML5, CSS.
 
-> Do you know that each time you call \mcode{\$scope.\$apply()} you actually call \mcode{\$rootScope.\$apply()} and this call updates all scopes and run all your watches?.
+> Do you know that each time you call `\$scope.\$apply()` you actually call `\$rootScope.\$apply()` and this call updates all scopes and run all your watches?.
 
-> Moreover, \mcode{\$rootScope.\$apply()} is called each time when: 
->*\mcode{\$timeout} handler is invoked (almost all debounce services are broken by design)
->*\mcode{\$http} receives a response (yeah, if you have a polling implemented on \mcode{\$http}...)
-* Any DOM handler is called (have you throttled your \mcode{ng-mouseovers}? They actually invoke ALL your \mcode{\$watches}, and built-in digest phasing does not really help)
+> Moreover, `\$rootScope.\$apply()` is called each time when: 
+>*`\$timeout` handler is invoked (almost all debounce services are broken by design)
+>*`\$http` receives a response (yeah, if you have a polling implemented on `\$http`...)
+* Any DOM handler is called (have you throttled your `ng-mouseovers`? They actually invoke ALL your `\$watches`, and built-in digest phasing does not really help)
 
 #### [BLOG8] Optimizing AngularJS: 1200ms to 35ms
 * Access date: June-2015
@@ -130,7 +130,7 @@
 
 > (comment): AngularJS 1.3 introduces one-time binding to reduce watching and digest loops which is relevant to this.
 
-> (comment): Yes, with the current implementation's approach, if the AngularJS team changed the \mcode{\$scope.\$watch} implementation to use a different non-public variable that we depend on, our change would break and we would have to fix it..
+> (comment): Yes, with the current implementation's approach, if the AngularJS team changed the `\$scope.\$watch` implementation to use a different non-public variable that we depend on, our change would break and we would have to fix it..
 
 
 #### [BLOG9] Speeding Up AngularJS Apps With Simple Optimizations
@@ -141,19 +141,19 @@
 
 > AngularJS dropped a really interesting feature recently in the beta version of 1.3.0: the ability to render data once and let it persist without being affected by future Model updates.
 
-> When \mcode{\$scope.\$apply()} is called it runs \mcode{\$rootScope.\$digest()}. This is what actually kicks off the internal digest cycle.
+> When `\$scope.\$apply()` is called it runs `\$rootScope.\$digest()`. This is what actually kicks off the internal digest cycle.
 
-> Instead of \mcode{\$scope.\$apply}, we could turn to \mcode{\$scope.\$digest}, which runs the exact same digest loop, but is executed from the current scope downwards through its children. The only caveat to this approach is that if you're dependent on two-way binding between Objects from the parent scope, the parent scope won't be updated until the next \mcode{\$rootScope} full digest cycle.
+> Instead of `\$scope.\$apply`, we could turn to `\$scope.\$digest`, which runs the exact same digest loop, but is executed from the current scope downwards through its children. The only caveat to this approach is that if you're dependent on two-way binding between Objects from the parent scope, the parent scope won't be updated until the next `\$rootScope` full digest cycle.
 
-> Avoid \mcode{ng-repeat} where possible. The \mcode{ng-repeat} directive is most likely the worst offender for performance concerns.
+> Avoid `ng-repeat` where possible. The `ng-repeat` directive is most likely the worst offender for performance concerns.
 
-> Instead of rendering a global navigation using \mcode{ng-repeat}, we could create our own navigation using the \mcode{\$interpolate} provider to render our template against an Object and convert it into DOM nodes.
+> Instead of rendering a global navigation using `ng-repeat`, we could create our own navigation using the `\$interpolate` provider to render our template against an Object and convert it into DOM nodes.
 
-> Another offender that will increase \mcode{\$\$watcher} counts are the core Angular directives such as \mcode{ng-show} and \mcode{ng-hide}. Although these might not immediately increase watcher counts dramatically, they can easily stack up in the hundreds inside an \mcode{ng-repeat}.
+> Another offender that will increase `\$\$watcher` counts are the core Angular directives such as `ng-show` and `ng-hide`. Although these might not immediately increase watcher counts dramatically, they can easily stack up in the hundreds inside an `ng-repeat`.
 
-> Angular also provides us with Directives such as \mcode{ng-mouseenter}, these can be more costly too as they're not only binding an event listener, they become a part of the digest cycle adding to the application weight.
+> Angular also provides us with Directives such as `ng-mouseenter`, these can be more costly too as they're not only binding an event listener, they become a part of the digest cycle adding to the application weight.
 
-> Limit DOM filters. Angular includes a \mcode{\$filter} provider, which you can use to run filters in your JavaScript before parsing into the DOM.
+> Limit DOM filters. Angular includes a `\$filter` provider, which you can use to run filters in your JavaScript before parsing into the DOM.
 
 #### [BLOG10] 11 Tips to Improve AngularJS Performance
 * Access date: July-2015
@@ -163,13 +163,13 @@
 
 > In Angular it is fairly easy to add so many watchers that your app will slow down to a crawl.
 
-> Angular 1.3 added \mcode{::} notation to allow one time binding. Angular will wait for a value to stabilize after its first series of digest cycles; after that, Angular will remove the watcher forgetting about that binding. If you are on pre 1.3 version of Angular you can use this library to achieve similar results.
+> Angular 1.3 added `::` notation to allow one time binding. Angular will wait for a value to stabilize after its first series of digest cycles; after that, Angular will remove the watcher forgetting about that binding. If you are on pre 1.3 version of Angular you can use this library to achieve similar results.
 
-> Use \mcode{\$watchCollection} instead of mcode{\$watch} (with a 3rd parameter).
+> Use `\$watchCollection` instead of mcode{\$watch` (with a 3rd parameter).
 
-> If you know there is going to be a lot of changes coming from an \mcode{ng-model}, you can de-bounce the input. For example if you have a search input like Google, you can de-bounce it by setting the following \mcode{ng-model} option: \mcode{ng-model-options=\aspas{\{ debounce: 250 \}}}. This will ensure that the digest cycle due to the changes in this input model will get triggered no more than once per 250ms.
+> If you know there is going to be a lot of changes coming from an `ng-model`, you can de-bounce the input. For example if you have a search input like Google, you can de-bounce it by setting the following `ng-model` option: `ng-model-options="{ debounce: 250 `"`. This will ensure that the digest cycle due to the changes in this input model will get triggered no more than once per 250ms.
 
-> Use \mcode{ng-if} instead of \mcode{ng-show} (but confirm that \mcode{ng-if} is actually better for your use case).
+> Use `ng-if` instead of `ng-show` (but confirm that `ng-if` is actually better for your use case).
 
 > Console.time is a great API, and I found it particularly helpful when debugging issues with Angular performance.
 
@@ -179,17 +179,17 @@
 
 > I just found yesterday a less known easy way to speed up angular : turn off angular’s debug features!
 
-#### [BLOG11] AngularJS: My Solution to the mcode{ng-repeat} Performance Problem
+#### [BLOG11] AngularJS: My Solution to the mcode{ng-repeat` Performance Problem
 * Access date: July-2015
 * URL: http://www.williambrownstreet.net/blog/2013/07/angularjs-my-solution-to-the-ng-repeat-performance-problem/
 * Author: Thierry Nicola
 * Author Information: Computer Scientist, working with Grails, AngularJS, BackboneJS, and ChaplinJS.
 
-> After some testing, the response times were very satisfying, however the application was blocking for 500-700ms after each refresh of the view. Quickly I stumble upon the problem: \mcode{ng-repeat}.
+> After some testing, the response times were very satisfying, however the application was blocking for 500-700ms after each refresh of the view. Quickly I stumble upon the problem: `ng-repeat`.
 
 > I was expecting this bad performance due to the internal working of AngularJS.
 
-> For \mcode{ng-repeat} you often want the items to be rendered and then forget about them as they are not updated from the client side. No two way binding required.
+> For `ng-repeat` you often want the items to be rendered and then forget about them as they are not updated from the client side. No two way binding required.
 
 > Bindonce (plugin or third-party module) allows to create a template to render that uses jQuery to render the HTML, so no two-way binding. This solved the problem of the slow rendering, but created another one namely that scrolling now had bad performance (on mobile scrolling was not controllable).
 
@@ -199,7 +199,7 @@
 
 > I slightly adapted the Infinite Scroll directive to make scrolling within a container possible that does not have height 100\% of window.
 
-> The limitTo with Infinite Scrolling plays very neat together with the Track By feature for \mcode{ng-repeat}.
+> The limitTo with Infinite Scrolling plays very neat together with the Track By feature for `ng-repeat`.
 
 #### [BLOG12] AngularJS Performance in Large Applications
 * Access date: July-2015
@@ -213,47 +213,47 @@
 
 > There are several things to be said about performant Javascript that are not necessarily limited to Angular.
 
-> Now that we have discussed JavaScript performance, it is important to understand a few key Angular concepts that are somewhat \aspas{under the hood}.
+> Now that we have discussed JavaScript performance, it is important to understand a few key Angular concepts that are somewhat under the hood.
 
-> Of particular importance to writing Angular JS applications in general and performance in particular is the digest cycle. Effectively, every scope stores an array of functions \mcode{\$\$watchers}.
+> Of particular importance to writing Angular JS applications in general and performance in particular is the digest cycle. Effectively, every scope stores an array of functions `$\watchers`.
 
-> When any value in scope changes, all watchers in the \mcode{\$\$watchers} array will fire, and if any of them modify a watched value, they will all fire again.
+> When any value in scope changes, all watchers in the `$$watchers` array will fire, and if any of them modify a watched value, they will all fire again.
 
 > We should think through our data model and attempt to limit the complexity of our objects. Use a custom serializer to only return the subset of keys that your Angular application absolutely must have.
 
 > Never watch a function result directly. This function will run on every digest cycle.
 
-> Every time \mcode{\$watch} is called on a scope value, or a value is bound from the DOM with interpolation, an \mcode{ng-repeat}, an \mcode{ng-switch}, and \mcode{ng-if}, or any other DOM attribute/element, a function gets added to the \mcode{\$\$watchers} array of the innermost scope.
+> Every time `\$watch` is called on a scope value, or a value is bound from the DOM with interpolation, an `ng-repeat`, an `ng-switch`, and `ng-if`, or any other DOM attribute/element, a function gets added to the `$$watchers` array of the innermost scope.
 
-> If non-Angular code is run through \mcode{\$scope.\$apply()}, this will immediately kickstart the digest cycle.
+> If non-Angular code is run through `\$scope.\$apply()`, this will immediately kickstart the digest cycle.
 
 > Design with Angular in mind.
 
-> Angular provides the ability to watch entire objects by passing a third, optional true parameter to \mcode{\$scope.\$watch}. This is a terrible idea.
+> Angular provides the ability to watch entire objects by passing a third, optional true parameter to `\$scope.\$watch`. This is a terrible idea.
 
-> \mcode{ng-repeat} does some pretty heavy DOM manipulation (not to mention polluting \mcode{\$\$watchers}). Keep any lists of rendered data small whether through pagination or infinite scroll.
+> `ng-repeat` does some pretty heavy DOM manipulation (not to mention polluting `$$watchers`). Keep any lists of rendered data small whether through pagination or infinite scroll.
 
 > Avoid using filters if at all possible. They are run twice per digest cycle and do not actually remove any part of the collection from memory.
 
-> It is also important to avoid a global list refresh when using \mcode{ng-repeat}. Doing something like \mcode{\$scope.listBoundToNgRepeat = serverFetch()} will cause a complete recalculation of the entire list, causing transcludes to run and watchers to fire for every individual element. This is a very expensive proposition. There are two ways around this. One is to maintain two collections and \mcode{ng-repeat} over the filtered set. The other is to use \emph{track by} to specify your own key.
+> It is also important to avoid a global list refresh when using `ng-repeat`. Doing something like `\$scope.listBoundToNgRepeat = serverFetch()` will cause a complete recalculation of the entire list, causing transcludes to run and watchers to fire for every individual element. This is a very expensive proposition. There are two ways around this. One is to maintain two collections and `ng-repeat` over the filtered set. The other is to use \emph{track by` to specify your own key.
 
 > Track by approach only works when a field on the repeated object can be guaranteed to be unique in the set.
 
-> \mcode{ng-hide} and \mcode{ng-show} simply toggle the CSS display property: Any scopes will exist, all \mcode{\$\$watchers} will fire, etc. \mcode{ng-if} and \mcode{ng-switch} actually remove or add the DOM completely. Unfortunately this results in a case by case judgment call.
+> `ng-hide` and `ng-show` simply toggle the CSS display property: Any scopes will exist, all `\$\$watchers` will fire, etc. `ng-if` and `ng-switch` actually remove or add the DOM completely. Unfortunately this results in a case by case judgment call.
 
-> A common source of slow Angular applications is incorrect use of \mcode{ng-hide} and \mcode{ng-show} over \mcode{ng-if} or \mcode{ng-switch}. The distinction is nontrivial, and the importance can not be overstated in the context of performance.
+> A common source of slow Angular applications is incorrect use of `ng-hide` and `ng-show` over `ng-if` or `ng-switch`. The distinction is nontrivial, and the importance can not be overstated in the context of performance.
 
-> The problem arises in the fact that \mcode{\$scope.\$apply} starts at \mcode{\$rootScope} and walks the entire scope chain causing every scope to fire every watcher.
+> The problem arises in the fact that `\$scope.\$apply` starts at `\$rootScope` and walks the entire scope chain causing every scope to fire every watcher.
 
-> In general, \mcode{\$scope.\$watch} is indicative of bad architecture.
+> In general, `\$scope.\$watch` is indicative of bad architecture.
 
-> \mcode{\$on}, \mcode{\$broadcast} , and \mcode{\$emit}, like \mcode{\$watch}, are slow as events (potentially) have to walk your entire scope hierarchy.
+> `\$on`, `\$broadcast` , and `\$emit`, like `\$watch`, are slow as events (potentially) have to walk your entire scope hierarchy.
 
-> \mcode{evalAsync} can greatly improve your page's performance.
+> `evalAsync` can greatly improve your page's performance.
 
 > By creating a new scope with Isolate Scope or Transclusion, we are creating a new object to track, adding new watchers, and therefore slowing down our application.
 
-> Angular provides many pre-rolled DOM event directives. \mcode{ng-click}, \mcode{ng-mouseenter}, \mcode{ng-mouseleave}, etc. All of these call \mcode{\$scope.\$apply()} every time the event occurs. A much more efficient approach is to bind directly with addEventListener, and then use \mcode{\$scope.\$digest} as necessary.
+> Angular provides many pre-rolled DOM event directives. `ng-click`, `ng-mouseenter`, `ng-mouseleave`, etc. All of these call `\$scope.\$apply()` every time the event occurs. A much more efficient approach is to bind directly with addEventListener, and then use `\$scope.\$digest` as necessary.
 
 #### [BLOG13] Why The World Needed Another AngularJS Grid
 * Access date: July-2015
@@ -274,7 +274,7 @@
 
 > There is no way to think about the higher level of Angular performance without understanding a few things:
 >* How digest cycle works in general
->* Difference between \mcode{\$scope.\$apply()} and \mcode{\$scope.\$digest()}
+>* Difference between `\$scope.\$apply()` and `\$scope.\$digest()`
 >* List of Angular core features triggering digest cycle
 
 #### [Q&A1] How Does Data Binding Work in AngularJS?
@@ -300,37 +300,37 @@
 
 > You need to create custom directives in order to curb the performance issues with angular. Unlike ember angular comes with all the bells and whistles turned on and it's up to you to tone it down.
 
-#### [Q&A4] How To Improve Performance Of mcode{ngRepeat} Over A Huge Dataset (Angular.js)?
+#### [Q&A4] How To Improve Performance Of mcode{ngRepeat` Over A Huge Dataset (Angular.js)?
 * Access date: July-2015
 * URL: http://stackoverflow.com/q/17348058/5244036
 
-> Most straightforward approach (fetch data, put it into \mcode{\$scope}, let \mcode{ng-repeat=\aspas{}} do its job) works fine, but it freezes the browser for about half of a minute when it starts inserting nodes into DOM.
+> Most straightforward approach (fetch data, put it into `\$scope`, let `ng-repeat=""` do its job) works fine, but it freezes the browser for about half of a minute when it starts inserting nodes into DOM.
 
 #### [Q&A5] How To Analyze Performance Benchmark In AngularJS Components?
 * Access date: July-2015
-* URL: http://stackoverflow.com/a/27400474/5244036}
+* URL: http://stackoverflow.com/a/27400474/5244036`
 
-> The \mcode{\$apply} function itself is relatively light (you can inspect it in the angular source). It is the process of evaluating watchers and comparing values (dirty-checking) during a \mcode{\$digest} that can get expensive.
+> The `\$apply` function itself is relatively light (you can inspect it in the angular source). It is the process of evaluating watchers and comparing values (dirty-checking) during a `\$digest` that can get expensive.
 
 
 #### [Q&A6] Ways To Improve AngularJS Performance Even With Large Number Of Dom Elements
 * Access date: July-2015
-* URL: http://stackoverflow.com/a/16128418/5244036}
+* URL: http://stackoverflow.com/a/16128418/5244036`
 
-> I think that the best way to solve performance issues is to avoid using high level abstractions (AngularJS \mcode{ng-repeat} with all corresponding background magic) in such situations. AngularJS is not a silver bullet and it's perfectly working with low level libraries.
+> I think that the best way to solve performance issues is to avoid using high level abstractions (AngularJS `ng-repeat` with all corresponding background magic) in such situations. AngularJS is not a silver bullet and it's perfectly working with low level libraries.
 
 #### [Q&A7] How To Speed Up An AngularJS Application?
 * Access date: July-2015
 * URL: http://stackoverflow.com/q/15643467/5244036
 
-> The thing you can do that will speed up your Angular app the most is to reduce those bindings where you can. One way to do this would be to create a directive that built out the table for you with DOM manipulation rather than using \mcode{ng-repeat}s.
+> The thing you can do that will speed up your Angular app the most is to reduce those bindings where you can. One way to do this would be to create a directive that built out the table for you with DOM manipulation rather than using `ng-repeat`s.
 
 #### [Q&A8] Angular.js Performance Issues
 * Access date: July-2015
 * URL: http://stackoverflow.com/a/14486570/5244036
 * Author: Ben Lesh
 
-> Every \mcode{ngRepeat} you set up, sets up a watch. Every \mcode{\{\{binding\}\}} or \mcode{ngModel} you do inside of that repeat, sets up another watch, and so on. Each of those creates function and object instances, and also needs to be processed on every \mcode{\$digest}. So, if your running into performance issues, you may need to implement a custom directive that writes out your data without setting up those superfluous watches, so you're a little more performant.
+> Every `ngRepeat` you set up, sets up a watch. Every `{{binding}}` or `ngModel` you do inside of that repeat, sets up another watch, and so on. Each of those creates function and object instances, and also needs to be processed on every `\$digest`. So, if your running into performance issues, you may need to implement a custom directive that writes out your data without setting up those superfluous watches, so you're a little more performant.
 
 ## Phase 2: Survey
 
