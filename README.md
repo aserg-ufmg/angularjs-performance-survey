@@ -6,14 +6,30 @@
 * Access date: June-2015
 * URL: https://docs.angularjs.org/guide/scope
 
+> If a \mcode{\$watch} changes the value of the model, it will force additional digest cycle.
+
+> Dirty checking the scope for property changes is a common operation in Angular and for this reason the dirty checking function must be efficient. Care should be taken that the dirty checking function does not do any DOM access, as DOM access is orders of magnitude slower than property access on JavaScript object.
+
+> Dirty checking can be done with three strategies: By reference, by collection contents, and by value.
+
 
 #### [DOC2] API Reference: mcode{$rootScope.Scope}
 * Access date: June-2015
 * URL: https://docs.angularjs.org/api/ng/type/$rootScope.Scope
 
+> \mcode{\$destroy()} must be called on a scope when it is desired for the scope and its child scopes to be permanently detached from the parent and thus stop participating in model change detection and listener notification.
+
+> Usually, you don't call \mcode{\$digest()} directly in controllers or in directives. Instead, you should call \mcode{\$apply()} (typically from within a directive), which will force a \mcode{\$digest()}.
+
 #### [DOC3] API Reference: mcode{ngRepeat}
 * Access date: June-2015
 * URL: https://docs.angularjs.org/api/ng/directive/ngRepeat
+
+> The \mcode{ngRepeat} directive instantiates a template once per item from a collection.
+
+> Special properties are exposed on the local scope of each template instance: \mcode{\$index}, \mcode{\$first}, \mcode{\$middle}, \mcode{\$last}, \mcode{\$even} and \mcode{\$odd}. Creating aliases for these properties is possible with ngInit. This may be useful when, for instance, nesting ngRepeats.
+
+> \mcode{ngRepeat} (as well as other ng directives) supports extending the range of the repeater by defining explicit start and end points by using \mcode{ng-repeat-start} and \mcode{ng-repeat-end}.
 
 
 #### [BLOG1] Why You Should Not Use Angularjs
