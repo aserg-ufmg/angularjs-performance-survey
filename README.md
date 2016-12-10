@@ -336,8 +336,8 @@
 
 https://github.com/aserg-ufmg/survey-angularjs-performance/blob/master/AngularJS-Performance-Form.pdf
 
-## Extended Technical Report
+## Technical Report
 
-This extended technical report provides detailed examples and technical discussions about our AngularJS performance survey.
+This technical report provides detailed examples and technical discussions about our AngularJS performance survey.
 
 https://github.com/aserg-ufmg/angularjs-performance-survey/blob/master/AngularJS-performance-survey-extended-technical-report.pdf
